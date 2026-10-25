@@ -79,6 +79,14 @@ def main():
         vistos.add(k)
         final.append(i)
 
+    try:
+        antigo = json.load(open(out, encoding="utf-8"))
+        if antigo.get("produtos") == final:
+            print(f"SEM MUDANCA: {out} já tem os mesmos {len(final)} produtos")
+            return
+    except (OSError, ValueError):
+        pass
+
     payload = {
         "atualizado_em": datetime.now(TZ).isoformat(timespec="minutes"),
         "ultimo_dia": ultimo.isoformat(),
