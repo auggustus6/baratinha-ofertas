@@ -1,0 +1,451 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rotina Baratinha — ofertas do Mercado Livre escolhidas todo dia</title>
+<meta name="description" content="Os mais vendidos e os maiores descontos do Mercado Livre, selecionados todo dia. Você compra direto no Mercado Livre.">
+<meta property="og:title" content="Rotina Baratinha — ofertas do Mercado Livre escolhidas todo dia">
+<meta property="og:description" content="Os mais vendidos e os maiores descontos do Mercado Livre, selecionados todo dia.">
+<meta name="theme-color" content="#FAF8F3">
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="apple-touch-icon" href="logo.png">
+<meta property="og:image" content="logo-512.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#FAF8F3; --surface:#FFFFFF; --cream:#EFE6D6; --cream-2:#E3D7BF; --img:#F2ECE2;
+  --ink:#1C1A17; --ink-2:#55504A; --muted:#8A847B; --line:#E7E1D6;
+  --gold:#B8862F; --gold-2:#C99A3E; --gold-ink:#8C6420; --dark:#1C1A17;
+  --radius:18px; --radius-sm:12px;
+  --serif:"Fraunces",Georgia,"Times New Roman",serif;
+  --sans:"Inter",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.5 var(--sans);-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+button{font:inherit;color:inherit;cursor:pointer}
+.wrap{max-width:1180px;margin:0 auto;padding:0 32px}
+
+/* Header */
+.top{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.96);backdrop-filter:saturate(1.4) blur(8px);border-bottom:1px solid var(--line)}
+.top-row{display:flex;align-items:center;gap:28px;height:76px}
+.brand{display:flex;align-items:center;gap:12px;flex:none}
+.brand img{width:48px;height:48px;border-radius:50%}
+.brand b{display:block;font:600 21px/1.05 var(--serif);letter-spacing:-.01em}
+.brand small{display:block;font-size:10.5px;letter-spacing:.08em;color:var(--ink-2);margin-top:3px}
+.search{flex:1;display:flex;align-items:center;gap:10px;height:46px;padding:0 18px;background:#F3EFE7;border:1px solid var(--line);border-radius:999px}
+.search svg{width:17px;height:17px;color:var(--ink-2);flex:none}
+.search input{flex:1;border:0;background:transparent;font:inherit;color:var(--ink);outline:none;min-width:0}
+.search input::placeholder{color:#97918A}
+.pill{display:inline-flex;align-items:center;gap:10px;height:46px;padding:0 10px 0 18px;border:1.5px solid var(--ink);border-radius:999px;background:#fff;font-weight:600;font-size:14px;white-space:nowrap;flex:none}
+.pill svg{width:18px;height:18px}
+.count{display:inline-grid;place-items:center;min-width:30px;height:24px;padding:0 9px;border-radius:999px;background:var(--gold-2);color:#fff;font-size:12.5px;font-weight:600}
+.cats{display:flex;gap:30px;overflow-x:auto;scrollbar-width:none;border-top:1px solid #F1EDE5}
+.cats::-webkit-scrollbar{display:none}
+.cats button{flex:none;background:none;border:0;padding:12px 0 11px;font-size:14px;font-weight:500;color:var(--ink);border-bottom:2px solid transparent}
+.cats button.on{border-color:var(--gold);font-weight:600}
+
+/* Hero */
+.hero{display:grid;grid-template-columns:1fr 1fr;border-radius:22px;overflow:hidden;margin:28px 0 30px;min-height:350px}
+.hero-txt{background:var(--cream);padding:44px 44px 40px 38px;display:flex;flex-direction:column;justify-content:center}
+.eyebrow{font-size:11.5px;font-weight:600;letter-spacing:.09em;color:var(--gold-ink);text-transform:uppercase}
+.hero h1{font:600 clamp(30px,3.4vw,40px)/1.12 var(--serif);letter-spacing:-.015em;margin:16px 0 18px}
+.hero p{margin:0 0 26px;color:#3F3A34;max-width:30em;font-size:15px}
+.btns{display:flex;gap:10px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;height:46px;padding:0 22px;border-radius:999px;font-weight:600;font-size:14px;border:1.5px solid var(--ink)}
+.btn-dark{background:var(--ink);color:#fff}
+.btn-line{background:transparent}
+.btn-white{background:#fff;border-color:#fff;color:var(--ink)}
+.hero-media{position:relative;background:var(--cream-2);display:flex;align-items:center;justify-content:center;padding:28px;overflow:hidden}
+.slide{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;gap:24px;padding:34px 40px 56px;opacity:0;transition:opacity .6s ease}
+.slide.on{opacity:1}
+.slide .ph{width:58%;max-width:300px;aspect-ratio:1;background:#fff;border-radius:20px;display:grid;place-items:center;box-shadow:0 18px 40px -22px rgba(60,40,10,.35);overflow:hidden}
+.slide .ph svg{width:36px;height:36px;color:#B9AE9C}
+.slide .ph img{width:86%;height:86%;object-fit:contain;mix-blend-mode:multiply}
+.slide .info{flex:1;max-width:210px}
+.slide .tag{display:inline-block;background:var(--ink);color:#fff;font-size:12px;font-weight:600;padding:5px 11px;border-radius:999px}
+.slide h3{font:600 20px/1.2 var(--serif);margin:12px 0 10px}
+.slide .de{font-size:13px;color:var(--ink-2);text-decoration:line-through}
+.slide .por{font:600 26px/1.1 var(--serif)}
+.slide .go{display:inline-block;margin-top:14px;font-weight:600;font-size:13.5px;border-bottom:1.5px solid var(--ink)}
+.dots{position:absolute;left:14px;bottom:14px;background:#fff;border-radius:999px;font-size:11.5px;font-weight:600;padding:5px 11px;display:flex;gap:8px;align-items:center}
+.dots i{width:6px;height:6px;border-radius:50%;background:#D7CDBB;display:inline-block;cursor:pointer}
+.dots i.on{background:var(--gold)}
+.hero-empty{text-align:center;color:var(--ink-2);font-size:13px}
+
+/* Benefits */
+.perks{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-bottom:46px}
+.perk{background:#fff;border:1px solid var(--line);border-radius:14px;padding:16px 18px;display:flex;gap:12px}
+.perk svg{width:18px;height:18px;flex:none;color:var(--gold);margin-top:1px}
+.perk b{display:block;font-size:13.5px;font-weight:600}
+.perk span{display:block;font-size:12.5px;color:var(--ink-2);line-height:1.4;margin-top:2px}
+
+/* Sections */
+.sec{margin-bottom:50px;scroll-margin-top:130px}
+.sec-h{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;margin-bottom:18px}
+.sec-h h2{font:600 28px/1.15 var(--serif);letter-spacing:-.01em;margin:0}
+.sec-h p{margin:4px 0 0;font-size:13.5px;color:var(--ink-2)}
+.more{font-weight:600;font-size:13.5px;white-space:nowrap;background:none;border:0;padding:0}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+
+/* Card */
+.card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;display:flex;flex-direction:column;transition:border-color .2s,box-shadow .2s}
+.card:hover{border-color:var(--gold-2);box-shadow:0 14px 30px -24px rgba(80,55,15,.45)}
+.card .im{position:relative;aspect-ratio:1/1;background:var(--img);display:grid;place-items:center}
+.card .im img{width:78%;height:78%;object-fit:contain;mix-blend-mode:multiply}
+.card .im svg{width:30px;height:30px;color:#B9AE9C}
+.badge{position:absolute;top:12px;left:12px;font-size:10.5px;font-weight:700;letter-spacing:.04em;padding:5px 10px;border-radius:999px;text-transform:uppercase}
+.badge.gold{background:var(--gold-2);color:#fff}
+.badge.white{background:#fff;color:var(--ink);border:1px solid var(--line)}
+.off{position:absolute;bottom:12px;right:12px;background:var(--ink);color:#fff;font-size:12px;font-weight:700;padding:5px 9px;border-radius:999px}
+.card .bd{padding:16px 16px 16px;display:flex;flex-direction:column;flex:1}
+.card .cat{font-size:10.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--gold-ink)}
+.card h3{font-size:14.5px;font-weight:500;line-height:1.35;margin:8px 0 6px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;min-height:2.7em}
+.card .meta{font-size:12.5px;color:var(--ink-2);margin:0 0 14px}
+.card .ft{margin-top:auto;display:flex;align-items:flex-end;justify-content:space-between;gap:10px}
+.card .de{font-size:12px;color:var(--muted);text-decoration:line-through;line-height:1}
+.card .por{font-size:16px;font-weight:700;margin-top:3px;white-space:nowrap}
+.card .cta{flex:none;display:inline-flex;align-items:center;height:36px;padding:0 15px;border-radius:999px;background:var(--ink);color:#fff;font-size:12.5px;font-weight:600}
+.card .when{font-size:11px;color:var(--muted);margin-top:10px}
+
+/* Info band */
+.band{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:50px}
+.band-dark{background:var(--dark);color:#fff;border-radius:var(--radius);padding:34px 30px}
+.band-dark .eyebrow{color:var(--gold-2)}
+.band-dark h2{font:600 26px/1.2 var(--serif);margin:12px 0 10px}
+.band-dark p{margin:0 0 22px;color:#D9D3C9;font-size:14px}
+.band-light{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:34px 30px}
+.steps{list-style:none;margin:14px 0 0;padding:0;display:grid;gap:14px}
+.steps li{display:flex;gap:12px;font-size:14px;align-items:flex-start}
+.steps li i{font-style:normal;flex:none;width:26px;height:26px;border-radius:50%;background:var(--cream);display:grid;place-items:center;font-size:12px;font-weight:600}
+
+/* Results */
+.empty{padding:50px 20px;text-align:center;color:var(--ink-2);background:#fff;border:1px dashed var(--line);border-radius:var(--radius)}
+
+/* Footer + bar */
+footer{border-top:1px solid var(--line);padding:30px 0 130px;color:var(--ink-2);font-size:12.5px}
+footer p{margin:0 0 8px;max-width:70em}
+.bar{position:fixed;left:50%;bottom:18px;transform:translateX(-50%);z-index:30;width:min(720px,calc(100% - 32px));background:var(--dark);color:#fff;border-radius:999px;padding:9px 9px 9px 18px;display:flex;align-items:center;gap:14px;box-shadow:0 18px 40px -16px rgba(0,0,0,.45)}
+.bar .count{background:var(--gold-2)}
+.bar .t{flex:1;min-width:0}
+.bar b{display:block;font-size:14px}
+.bar span{display:block;font-size:12px;color:#CFC8BC;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.bar .btn{height:44px}
+
+@media (max-width:980px){
+  .grid{grid-template-columns:repeat(3,1fr)}
+  .perks{grid-template-columns:repeat(2,1fr)}
+}
+@media (max-width:760px){
+  .wrap{padding:0 16px}
+  .top-row{flex-wrap:wrap;height:auto;padding:12px 0;gap:12px}
+  .search{order:3;flex-basis:100%;height:42px}
+  .brand{margin-right:auto}
+  .pill{height:40px;padding:0 8px 0 14px}
+  .pill .lbl{display:none}
+  .cats{gap:22px}
+  .hero{grid-template-columns:1fr;margin-top:18px}
+  .hero-txt{padding:30px 22px}
+  .hero-media{min-height:300px}
+  .slide{padding:24px 22px 52px}
+  .grid{grid-template-columns:repeat(2,1fr);gap:10px}
+  .card .bd{padding:12px}
+  .card .ft{flex-direction:column;align-items:stretch}
+  .card .cta{justify-content:center}
+  .band{grid-template-columns:1fr}
+  .sec-h h2{font-size:24px}
+  .bar{border-radius:20px;padding:8px}
+  .bar .count,.bar .t{display:none}
+  .bar .btn{flex:1}
+  .badge{font-size:9.5px;padding:4px 8px;top:8px;left:8px}
+  .off{font-size:11px;bottom:8px;right:8px}
+  .slide{gap:16px}
+  .slide .ph{width:46%}
+  .slide h3{font-size:17px}
+  .slide .por{font-size:22px}
+}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <div class="top-row">
+      <a class="brand" href="/" aria-label="Início">
+        <img src="logo.png" alt="" width="48" height="48">
+        <span><b id="siteName">Rotina Baratinha</b><small>OFERTAS DO MERCADO LIVRE</small></span>
+      </a>
+      <label class="search">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        <input id="q" type="search" placeholder="Buscar por produto ou categoria" autocomplete="off">
+      </label>
+      <a class="pill" id="groupPill" href="#" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M20.5 11.6a8.4 8.4 0 0 1-12.4 7.4L3.5 20.5 5 16.1A8.4 8.4 0 1 1 20.5 11.6Z"/></svg>
+        <span class="lbl">Grupo de ofertas</span><span class="count" id="countTop">0</span>
+      </a>
+    </div>
+    <nav class="cats" id="cats" aria-label="Categorias"></nav>
+  </div>
+</header>
+
+<main class="wrap" id="main">
+  <section class="hero" id="topo">
+    <div class="hero-txt">
+      <div class="eyebrow">Ofertas selecionadas todo dia</div>
+      <h1>Achados com desconto de verdade, escolhidos a dedo toda manhã.</h1>
+      <p>Garimpamos os mais vendidos e os maiores descontos do Mercado Livre e trazemos aqui. Você compra direto no Mercado Livre, com pagamento, entrega e garantia de lá.</p>
+      <div class="btns">
+        <a class="btn btn-dark" href="#ofertas">Ver ofertas</a>
+        <a class="btn btn-line js-group" href="#" target="_blank" rel="noopener">Entrar no grupo</a>
+      </div>
+    </div>
+    <div class="hero-media" id="heroMedia"><div class="hero-empty">Carregando ofertas…</div></div>
+  </section>
+
+  <div class="perks">
+    <div class="perk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/></svg><div><b>Seleção diária</b><span>Lista nova toda manhã, com os preços do dia.</span></div></div>
+    <div class="perk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 7h16l-1.5 11a2 2 0 0 1-2 1.7H7.5a2 2 0 0 1-2-1.7L4 7Z"/><path d="M9 7V5.5a3 3 0 0 1 6 0V7"/></svg><div><b>Compra no Mercado Livre</b><span>Pagamento, frete e garantia direto por lá.</span></div></div>
+    <div class="perk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1-4.4-4.3 6.1-.9L12 3Z"/></svg><div><b>Só os mais vendidos</b><span>Produtos com milhares de vendas e boa procura.</span></div></div>
+    <div class="perk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20.5 11.6a8.4 8.4 0 0 1-12.4 7.4L3.5 20.5 5 16.1A8.4 8.4 0 1 1 20.5 11.6Z"/></svg><div><b>Ofertas no WhatsApp</b><span>Receba no grupo ao longo da manhã.</span></div></div>
+  </div>
+
+  <div id="ofertas"></div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p><b id="footName">Rotina Baratinha</b> participa do programa de afiliados do Mercado Livre. Ao comprar pelos links deste site, podemos receber uma comissão, sem nenhum custo extra para você.</p>
+    <p>Preços, descontos e estoque são do Mercado Livre e podem mudar a qualquer momento. Confira sempre o valor final no anúncio antes de comprar.</p>
+    <p id="stamp"></p>
+  </div>
+</footer>
+
+<div class="bar" id="bar" hidden>
+  <span class="count" id="countBar">0</span>
+  <div class="t"><b id="barTitle">Ofertas novas hoje</b><span id="barSub"></span></div>
+  <a class="btn btn-white js-group" href="#" target="_blank" rel="noopener">Entrar no grupo do WhatsApp →</a>
+</div>
+
+<script>
+/* ===== Configuração ===== */
+const CONFIG = {
+  nome: "Rotina Baratinha",
+  grupo: "https://chat.whatsapp.com/JYVKd50DD9pBjHozafHTYl",            // link de convite do grupo de WhatsApp (https://chat.whatsapp.com/...)
+  // CSV da aba "Vitrine" publicada na web (Arquivo > Compartilhar > Publicar na Web > Vitrine > CSV).
+  // Vazio = usa o produtos.json do próprio site.
+  planilha: "",
+  dados: "produtos.json",
+  janelaDias: 7
+};
+
+/* Lê o CSV da aba Vitrine e devolve no mesmo formato do produtos.json */
+function parseCSV(t){
+  const rows = []; let row = [], f = "", q = false;
+  for (let i = 0; i < t.length; i++){
+    const c = t[i];
+    if (q){ if (c === '"'){ if (t[i+1] === '"'){ f += '"'; i++; } else q = false; } else f += c; }
+    else if (c === '"') q = true;
+    else if (c === ","){ row.push(f); f = ""; }
+    else if (c === "\n"){ row.push(f); rows.push(row); row = []; f = ""; }
+    else if (c !== "\r") f += c;
+  }
+  if (f || row.length){ row.push(f); rows.push(row); }
+  return rows;
+}
+const brNum = v => { let s = String(v ?? "").replace(/R\$|\s/g,""); if (!s) return null; if (s.includes(",")) s = s.replace(/\./g,"").replace(",","."); const n = parseFloat(s); return isNaN(n) ? null : n; };
+function fromSheet(csv){
+  const rows = parseCSV(csv); const h = rows[0].map(x => x.trim().toLowerCase()); const ix = k => h.indexOf(k);
+  const g = (r,k) => (ix(k) >= 0 ? (r[ix(k)] || "").trim() : "");
+  let items = rows.slice(1).map(r => {
+    const dia = g(r,"data").replace(/^'/,"").slice(0,10), lista = g(r,"lista").toLowerCase(), img = g(r,"imagem");
+    return { id: `${dia}-${g(r,"n")}`, data: dia, lista: ["a","comissao","comissão"].includes(lista) ? "destaque" : "volume",
+      nome: g(r,"produto"), curto: g(r,"remetente") || g(r,"produto"), categoria: g(r,"categoria") || "Outros",
+      preco: brNum(g(r,"preco")), preco_antigo: brNum(g(r,"preco_antigo")), desconto: Math.round(brNum(g(r,"desconto_pct")) || 0),
+      vendidos: Math.round(brNum(g(r,"vendidos")) || 0), link: g(r,"link"), imagem: img.startsWith("https://") ? img : null };
+  }).filter(p => /^\d{4}-\d{2}-\d{2}$/.test(p.data) && p.link.startsWith("https://meli.la/"));
+  const ultimo = items.reduce((m,p) => p.data > m ? p.data : m, "");
+  const corte = new Date(ultimo + "T12:00:00"); corte.setDate(corte.getDate() - (CONFIG.janelaDias - 1));
+  const corteIso = corte.toISOString().slice(0,10);
+  items = items.filter(p => p.data >= corteIso).sort((a,b) => a.data === b.data ? (+a.id.split("-").pop()) - (+b.id.split("-").pop()) : (a.data < b.data ? 1 : -1));
+  const seen = new Set(); items = items.filter(p => { const k = p.nome.toLowerCase().slice(0,60); if (seen.has(k)) return false; seen.add(k); return true; });
+  return { atualizado_em: null, ultimo_dia: ultimo, total: items.length, produtos: items };
+}
+async function carregar(){
+  if (CONFIG.planilha){
+    try{
+      const r = await fetch(CONFIG.planilha + (CONFIG.planilha.includes("?") ? "&" : "?") + "t=" + Date.now(), {cache:"no-store"});
+      if (r.ok){ const d = fromSheet(await r.text()); if (d.produtos.length) return d; }
+    }catch(e){}
+  }
+  const r = await fetch(CONFIG.dados + "?v=" + Date.now(), {cache:"no-store"});
+  return r.json();
+}
+
+const $ = s => document.querySelector(s);
+const BRL = v => v == null ? "" : v.toLocaleString("pt-BR", {style:"currency", currency:"BRL"});
+const dm = iso => { const [y,m,d] = iso.split("-"); return `${d}/${m}`; };
+const vend = n => n >= 1e6 ? `+${(n/1e6).toLocaleString("pt-BR",{maximumFractionDigits:1})} milhão vendidos`.replace(/(\d),(\d) milhão/,"$1,$2 milhões")
+               : n >= 1000 ? `+${Math.floor(n/1000).toLocaleString("pt-BR")} mil vendidos` : n > 0 ? `+${n} vendidos` : "";
+const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const norm = s => String(s).normalize("NFD").replace(/[̀-ͯ]/g,"").toLowerCase();
+const ICON = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 7h16l-1.5 11a2 2 0 0 1-2 1.7H7.5a2 2 0 0 1-2-1.7L4 7Z"/><path d="M9 7V5.5a3 3 0 0 1 6 0V7"/></svg>`;
+
+let ALL = [], DIA = "", TOPVEND = new Set(), state = {cat:"Todos", q:"", view:null};
+
+function card(p){
+  const badge = TOPVEND.has(p.id) ? `<span class="badge gold">Mais vendido</span>`
+              : p.data === DIA ? `<span class="badge white">Novo hoje</span>` : "";
+  return `<article class="card">
+    <a class="im" href="${esc(p.link)}" target="_blank" rel="sponsored nofollow noopener" aria-label="${esc(p.nome)}">
+      ${p.imagem ? `<img src="${esc(p.imagem)}" alt="" loading="lazy" onerror="this.replaceWith(document.createRange().createContextualFragment(ICON))">` : ICON}
+      ${badge}${p.desconto ? `<span class="off">-${p.desconto}%</span>` : ""}
+    </a>
+    <div class="bd">
+      <div class="cat">${esc(p.categoria)}</div>
+      <h3>${esc(p.nome)}</h3>
+      <p class="meta">${vend(p.vendidos)}</p>
+      <div class="ft">
+        <div>${p.preco_antigo && p.preco_antigo > p.preco ? `<div class="de">${BRL(p.preco_antigo)}</div>` : ""}<div class="por">${BRL(p.preco)}</div></div>
+        <a class="cta" href="${esc(p.link)}" target="_blank" rel="sponsored nofollow noopener">Ver oferta</a>
+      </div>
+      <div class="when">Preço visto em ${dm(p.data)}</div>
+    </div>
+  </article>`;
+}
+
+function section(id, title, sub, items, moreLabel, moreAction){
+  if (!items.length) return "";
+  return `<section class="sec" id="${id}">
+    <div class="sec-h"><div><h2>${title}</h2><p>${sub}</p></div>
+      ${moreLabel ? `<button class="more" data-more="${moreAction}">${moreLabel} →</button>` : ""}</div>
+    <div class="grid">${items.map(card).join("")}</div>
+  </section>`;
+}
+
+function band(){
+  return `<div class="band">
+    <div class="band-dark">
+      <div class="eyebrow">Ofertas no WhatsApp</div>
+      <h2>Receba as melhores ofertas do dia direto no seu celular.</h2>
+      <p>Mandamos as ofertas no grupo ao longo da manhã, com foto, preço e link. Sem spam: só o que vale a pena.</p>
+      <a class="btn btn-white js-group" href="#" target="_blank" rel="noopener">Entrar no grupo</a>
+    </div>
+    <div class="band-light">
+      <div class="eyebrow">Como funciona</div>
+      <ol class="steps">
+        <li><i>1</i><span><b>Escolha a oferta</b> que te interessa aqui no site.</span></li>
+        <li><i>2</i><span><b>Clique em “Ver oferta”</b> e você vai direto para o anúncio no Mercado Livre.</span></li>
+        <li><i>3</i><span><b>Compre pelo Mercado Livre</b>, com o pagamento, a entrega e a garantia de sempre.</span></li>
+      </ol>
+    </div>
+  </div>`;
+}
+
+function render(){
+  const box = $("#ofertas");
+  const q = norm(state.q.trim());
+  let list = ALL;
+  if (state.cat !== "Todos") list = list.filter(p => p.categoria === state.cat);
+  if (q) list = list.filter(p => norm(p.nome + " " + p.categoria).includes(q));
+
+  if (q || state.cat !== "Todos" || state.view){
+    let title = q ? `Resultados para “${esc(state.q.trim())}”` : state.cat !== "Todos" ? esc(state.cat) : "";
+    if (state.view === "vendidos"){ list = [...list].sort((a,b)=>b.vendidos-a.vendidos); title = title || "Mais vendidos"; }
+    else if (state.view === "desconto"){ list = [...list].sort((a,b)=>b.desconto-a.desconto); title = title || "Maiores descontos"; }
+    else if (state.view === "destaques"){ list = list.filter(p=>p.lista==="destaque"); title = title || "Destaques do dia"; }
+    else if (state.view === "todas"){ title = title || "Todas as ofertas"; }
+    box.innerHTML = list.length
+      ? `<section class="sec"><div class="sec-h"><div><h2>${title}</h2><p>${list.length} ${list.length===1?"oferta":"ofertas"}</p></div><button class="more" data-more="reset">Voltar ao início →</button></div><div class="grid">${list.map(card).join("")}</div></section>`
+      : `<div class="empty">Nenhuma oferta encontrada agora. Tente outra busca ou <button class="more" data-more="reset">veja todas as ofertas</button>.</div>`;
+    bindGroup(); return;
+  }
+
+  const hoje = ALL.filter(p => p.data === DIA);
+  const base = hoje.length ? hoje : ALL;
+  const vendidos = [...ALL].sort((a,b)=>b.vendidos-a.vendidos).slice(0,4);
+  const destaques = base.filter(p=>p.lista==="destaque").slice(0,8);
+  const descontos = [...ALL].sort((a,b)=>b.desconto-a.desconto).slice(0,4);
+  const cats = [...new Set(ALL.map(p=>p.categoria))];
+  let html = section("mais-vendidos","Mais vendidos","Os produtos que mais saem no Mercado Livre entre as ofertas da semana.",vendidos,"Ver todos","vendidos");
+  html += section("destaques","Destaques do dia",`Ofertas selecionadas em ${dm(DIA)}.`,destaques,"Ver todos","destaques");
+  html += band();
+  html += section("descontos","Maiores descontos","Os maiores percentuais de desconto da semana.",descontos,"Ver todos","desconto");
+  cats.forEach(c => {
+    const it = ALL.filter(p=>p.categoria===c).slice(0,4);
+    if (it.length) html += section("cat-"+norm(c).replace(/\W+/g,"-"), esc(c), `${ALL.filter(p=>p.categoria===c).length} ofertas em ${esc(c.toLowerCase())}.`, it, "Ver todos", "cat:"+c);
+  });
+  box.innerHTML = html;
+  bindGroup();
+}
+
+function hero(){
+  const pool = ALL.filter(p=>p.imagem).sort((a,b)=> (b.data===DIA)-(a.data===DIA) || b.desconto-a.desconto).slice(0,3);
+  const el = $("#heroMedia");
+  if (!pool.length){ el.innerHTML = `<div class="hero-empty">As ofertas do dia aparecem aqui.</div>`; return; }
+  el.innerHTML = pool.map((p,i)=>`<a class="slide${i?"":" on"}" href="${esc(p.link)}" target="_blank" rel="sponsored nofollow noopener">
+      <div class="ph"><img src="${esc(p.imagem)}" alt="" onerror="this.replaceWith(document.createRange().createContextualFragment(ICON))"></div>
+      <div class="info"><span class="tag">-${p.desconto}% hoje</span><h3>${esc(p.curto || p.nome)}</h3>
+        ${p.preco_antigo ? `<div class="de">${BRL(p.preco_antigo)}</div>` : ""}<div class="por">${BRL(p.preco)}</div><span class="go">Ver no Mercado Livre</span></div>
+    </a>`).join("") + `<div class="dots"><span>Oferta <em id="sn">1</em> de ${pool.length}</span>${pool.map((_,i)=>`<i data-i="${i}" class="${i?"":"on"}"></i>`).join("")}</div>`;
+  let cur = 0; const slides = el.querySelectorAll(".slide"), dots = el.querySelectorAll(".dots i");
+  const go = i => { slides[cur].classList.remove("on"); dots[cur].classList.remove("on"); cur = i; slides[cur].classList.add("on"); dots[cur].classList.add("on"); $("#sn").textContent = cur+1; };
+  dots.forEach(d => d.addEventListener("click", e => { e.preventDefault(); go(+d.dataset.i); }));
+  if (pool.length > 1) setInterval(()=>go((cur+1)%pool.length), 5000);
+}
+
+function nav(){
+  const cats = ["Todos", ...[...new Set(ALL.map(p=>p.categoria))].sort((a,b)=>a.localeCompare(b,"pt-BR"))];
+  $("#cats").innerHTML = cats.map(c=>`<button data-cat="${esc(c)}" class="${c===state.cat?"on":""}">${esc(c)}</button>`).join("");
+}
+
+function bindGroup(){
+  document.querySelectorAll(".js-group, #groupPill").forEach(a => {
+    if (CONFIG.grupo){ a.href = CONFIG.grupo; a.hidden = false; }
+    else { a.removeAttribute("target"); a.href = "#ofertas"; }
+  });
+}
+
+document.addEventListener("click", e => {
+  const c = e.target.closest("[data-cat]");
+  if (c){ state.cat = c.dataset.cat; state.view = null; nav(); render(); window.scrollTo({top:$("#ofertas").offsetTop-140, behavior:"smooth"}); return; }
+  const m = e.target.closest("[data-more]");
+  if (m){
+    const v = m.dataset.more;
+    if (v === "reset"){ state = {cat:"Todos", q:"", view:null}; $("#q").value = ""; }
+    else if (v.startsWith("cat:")){ state.cat = v.slice(4); state.view = null; }
+    else state.view = v;
+    nav(); render(); window.scrollTo({top:$("#ofertas").offsetTop-140, behavior:"smooth"});
+  }
+});
+let t; $("#q").addEventListener("input", e => { clearTimeout(t); t = setTimeout(()=>{ state.q = e.target.value; state.view = state.q ? "todas" : null; render(); }, 180); });
+
+(async function init(){
+  document.title = `${CONFIG.nome} — ofertas do Mercado Livre escolhidas todo dia`;
+  $("#siteName").textContent = CONFIG.nome; $("#footName").textContent = CONFIG.nome;
+  bindGroup();
+  try{
+    const d = await carregar();
+    ALL = (d.produtos || []).filter(p => p.link && p.preco);
+    DIA = d.ultimo_dia || (ALL[0] && ALL[0].data) || "";
+    [...ALL].sort((a,b)=>b.vendidos-a.vendidos).slice(0,4).forEach(p=>TOPVEND.add(p.id));
+    const hoje = ALL.filter(p=>p.data===DIA).length;
+    $("#countTop").textContent = hoje; $("#countBar").textContent = hoje;
+    $("#barTitle").textContent = `${hoje} ofertas novas em ${dm(DIA)}`;
+    $("#barSub").textContent = `${ALL.length} ofertas da semana no site. Preços podem mudar no Mercado Livre.`;
+    $("#bar").hidden = false;
+    const at = d.atualizado_em ? new Date(d.atualizado_em) : null;
+    $("#stamp").textContent = at ? `Lista atualizada em ${at.toLocaleDateString("pt-BR",{timeZone:"America/Sao_Paulo"})} às ${at.toLocaleTimeString("pt-BR",{hour:"2-digit",minute:"2-digit",timeZone:"America/Sao_Paulo"})}.` : `Ofertas de ${dm(DIA)}.`;
+    nav(); hero(); render();
+  }catch(err){
+    $("#ofertas").innerHTML = `<div class="empty">Não foi possível carregar as ofertas agora. Atualize a página em instantes.</div>`;
+    $("#heroMedia").innerHTML = `<div class="hero-empty">Ofertas indisponíveis no momento.</div>`;
+  }
+})();
+</script>
+</body>
+</html>
