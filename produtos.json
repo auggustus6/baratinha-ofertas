@@ -1,7 +1,7 @@
 {
- "atualizado_em": "2026-10-26T07:23-03:00",
+ "atualizado_em": "2026-10-26T10:49-03:00",
  "ultimo_dia": "2026-10-26",
- "total": 48,
+ "total": 60,
  "produtos": [
   {
    "id": "2026-10-26-1",
@@ -15,6 +15,7 @@
    "desconto": 42,
    "vendidos": 100000,
    "link": "https://meli.la/22sTp5P",
+   "loja": "Mercado Livre",
    "imagem": "https://http2.mlstatic.com/D_NQ_NP_2X_730513-MLB80451340719_112024-F.jpg"
   },
   {
@@ -29,6 +30,7 @@
    "desconto": 57,
    "vendidos": 100000,
    "link": "https://meli.la/2g5VpMF",
+   "loja": "Mercado Livre",
    "imagem": "https://http2.mlstatic.com/D_NQ_NP_2X_632789-MLB116693864997_082026-F.jpg"
   },
   {
@@ -43,6 +45,7 @@
    "desconto": 25,
    "vendidos": 100000,
    "link": "https://meli.la/2ScuBGs",
+   "loja": "Mercado Livre",
    "imagem": "https://http2.mlstatic.com/D_NQ_NP_2X_761257-MLA108807654621_032026-F.jpg"
   },
   {
@@ -57,6 +60,7 @@
    "desconto": 46,
    "vendidos": 100000,
    "link": "https://meli.la/1YCPio1",
+   "loja": "Mercado Livre",
    "imagem": "https://http2.mlstatic.com/D_NQ_NP_2X_753960-MLB78002610612_082024-F.jpg"
   },
   {
@@ -71,6 +75,7 @@
    "desconto": 50,
    "vendidos": 100000,
    "link": "https://meli.la/1GnKq16",
+   "loja": "Mercado Livre",
    "imagem": "https://http2.mlstatic.com/D_NQ_NP_2X_776821-MLA99365251528_112025-F.jpg"
   },
   {
@@ -85,6 +90,7 @@
    "desconto": 60,
    "vendidos": 100000,
    "link": "https://meli.la/1zgtDLy",
+   "loja": "Mercado Livre",
    "imagem": "https://http2.mlstatic.com/D_NQ_NP_2X_835659-MLA116548375638_092026-F.jpg"
   },
   {
@@ -99,6 +105,7 @@
    "desconto": 39,
    "vendidos": 100000,
    "link": "https://meli.la/2sh6gt3",
+   "loja": "Mercado Livre",
    "imagem": "https://http2.mlstatic.com/D_NQ_NP_2X_664658-MLB96932532195_112025-F.jpg"
   },
   {
@@ -113,6 +120,7 @@
    "desconto": 50,
    "vendidos": 100000,
    "link": "https://meli.la/1roCwKA",
+   "loja": "Mercado Livre",
    "imagem": "https://http2.mlstatic.com/D_NQ_NP_2X_710675-MLB89102120983_082025-F.jpg"
   },
   {
@@ -127,6 +135,7 @@
    "desconto": 30,
    "vendidos": 1000,
    "link": "https://meli.la/2p4kqM7",
+   "loja": "Mercado Livre",
    "imagem": "https://http2.mlstatic.com/D_NQ_NP_2X_694884-MLA117364925228_102026-F.jpg"
   },
   {
@@ -141,6 +150,7 @@
    "desconto": 52,
    "vendidos": 1000,
    "link": "https://meli.la/2zXx5LK",
+   "loja": "Mercado Livre",
    "imagem": "https://http2.mlstatic.com/D_NQ_NP_2X_720214-MLA116429863462_092026-F.jpg"
   },
   {
@@ -155,6 +165,7 @@
    "desconto": 41,
    "vendidos": 1000,
    "link": "https://meli.la/1w9x7Ej",
+   "loja": "Mercado Livre",
    "imagem": "https://http2.mlstatic.com/D_NQ_NP_2X_919346-MLA99939809511_112025-F.jpg"
   },
   {
@@ -169,6 +180,7 @@
    "desconto": 36,
    "vendidos": 10000,
    "link": "https://meli.la/1XiFM2c",
+   "loja": "Mercado Livre",
    "imagem": "https://http2.mlstatic.com/D_NQ_NP_2X_737130-MLA99503062202_112025-F.jpg"
   },
   {
@@ -183,6 +195,7 @@
    "desconto": 56,
    "vendidos": 5000,
    "link": "https://meli.la/2M946cc",
+   "loja": "Mercado Livre",
    "imagem": "https://http2.mlstatic.com/D_NQ_NP_2X_803813-MLA117249332440_102026-F.jpg"
   },
   {
@@ -197,6 +210,7 @@
    "desconto": 45,
    "vendidos": 1000,
    "link": "https://meli.la/2pBn1nT",
+   "loja": "Mercado Livre",
    "imagem": "https://http2.mlstatic.com/D_NQ_NP_2X_835541-MLA99987777875_112025-F.jpg"
   },
   {
@@ -211,6 +225,7 @@
    "desconto": 50,
    "vendidos": 5000,
    "link": "https://meli.la/1HLNYUj",
+   "loja": "Mercado Livre",
    "imagem": "https://http2.mlstatic.com/D_NQ_NP_2X_941214-MLB117311637498_102026-F.jpg"
   },
   {
@@ -225,7 +240,188 @@
    "desconto": 21,
    "vendidos": 10000,
    "link": "https://meli.la/2rCjVuz",
+   "loja": "Mercado Livre",
    "imagem": "https://http2.mlstatic.com/D_NQ_NP_2X_843202-MLA96434907158_102025-F.jpg"
+  },
+  {
+   "id": "2026-10-26-17",
+   "data": "2026-10-26",
+   "lista": "volume",
+   "nome": "Hidrabene Protetor Solar Clareador Facial 70 FPS",
+   "curto": "Protetor Solar Hidrabene",
+   "categoria": "Beleza",
+   "preco": 36.9,
+   "preco_antigo": 59.9,
+   "desconto": 38,
+   "vendidos": 40000,
+   "link": "https://s.shopee.com.br/4LKRozB4pN",
+   "loja": "Shopee",
+   "imagem": "https://down-br.img.susercontent.com/file/br-11134207-820ld-mswt16eywd1h35"
+  },
+  {
+   "id": "2026-10-26-18",
+   "data": "2026-10-26",
+   "lista": "volume",
+   "nome": "Ultra Hidratação Efeito Teia com Óleos Marroquinos - Fina Maria",
+   "curto": "Máscara Efeito Teia",
+   "categoria": "Beleza",
+   "preco": 38.9,
+   "preco_antigo": 79.8,
+   "desconto": 51,
+   "vendidos": 30000,
+   "link": "https://s.shopee.com.br/4B11cgBiAM",
+   "loja": "Shopee",
+   "imagem": "https://down-br.img.susercontent.com/file/sg-11134201-8258h-mr1ynaykoao016"
+  },
+  {
+   "id": "2026-10-26-19",
+   "data": "2026-10-26",
+   "lista": "volume",
+   "nome": "Óleo Extraordinário L'Oréal Paris Elseve 100ml, Anti Frizz, Protetor Térmico",
+   "curto": "Óleo Elseve 100ml",
+   "categoria": "Beleza",
+   "preco": 36.99,
+   "preco_antigo": 60.59,
+   "desconto": 39,
+   "vendidos": 20000,
+   "link": "https://s.shopee.com.br/40hbQNCLVL",
+   "loja": "Shopee",
+   "imagem": "https://down-br.img.susercontent.com/file/br-11134207-820lt-msof4dg2rnyc07"
+  },
+  {
+   "id": "2026-10-26-20",
+   "data": "2026-10-26",
+   "lista": "volume",
+   "nome": "Cinta Modeladora / Roupa Íntima Modeladora Feminina",
+   "curto": "Cinta Modeladora",
+   "categoria": "Moda Feminina",
+   "preco": 27.99,
+   "preco_antigo": 50.0,
+   "desconto": 44,
+   "vendidos": 20000,
+   "link": "https://s.shopee.com.br/5AtYoW7u8a",
+   "loja": "Shopee",
+   "imagem": "https://down-br.img.susercontent.com/file/br-11134201-820lg-mqxo1w6fkcna02"
+  },
+  {
+   "id": "2026-10-26-21",
+   "data": "2026-10-26",
+   "lista": "volume",
+   "nome": "Bermuda Modeladora Anágua Short Feminino Alta Compressão",
+   "curto": "Bermuda Modeladora",
+   "categoria": "Moda Feminina",
+   "preco": 20.96,
+   "preco_antigo": 38.99,
+   "desconto": 46,
+   "vendidos": 9000,
+   "link": "https://s.shopee.com.br/50a8cD8XTZ",
+   "loja": "Shopee",
+   "imagem": "https://down-br.img.susercontent.com/file/br-11134207-7r98o-m29x89by72l25f"
+  },
+  {
+   "id": "2026-10-26-22",
+   "data": "2026-10-26",
+   "lista": "volume",
+   "nome": "Creatina Monohidratada em Pó 100% Pura - Soldiers Nutrition",
+   "curto": "Creatina Soldiers",
+   "categoria": "Saúde",
+   "preco": 33.9,
+   "preco_antigo": 69.9,
+   "desconto": 52,
+   "vendidos": 20000,
+   "link": "https://s.shopee.com.br/3qOBE6pq2N",
+   "loja": "Shopee",
+   "imagem": "https://down-br.img.susercontent.com/file/br-11134207-820m9-mpwm1rqctatfc5"
+  },
+  {
+   "id": "2026-10-26-23",
+   "data": "2026-10-26",
+   "lista": "destaque",
+   "nome": "Celimax The Vita A Retinal Shot Tightening Booster 15ml",
+   "curto": "Sérum Celimax Retinal",
+   "categoria": "Beleza",
+   "preco": 136.0,
+   "preco_antigo": 220.0,
+   "desconto": 38,
+   "vendidos": 10000,
+   "link": "https://s.shopee.com.br/2gCDpxuHPA",
+   "loja": "Shopee",
+   "imagem": "https://down-br.img.susercontent.com/file/sg-11134207-825ai-mr9pynhmd43k22"
+  },
+  {
+   "id": "2026-10-26-24",
+   "data": "2026-10-26",
+   "lista": "destaque",
+   "nome": "Kit Facial Kokeshi Completo 3 Passos Hidratação e Colágeno",
+   "curto": "Kit Facial Kokeshi",
+   "categoria": "Beleza",
+   "preco": 59.9,
+   "preco_antigo": 85.9,
+   "desconto": 30,
+   "vendidos": 10000,
+   "link": "https://s.shopee.com.br/2qVe2Gte4D",
+   "loja": "Shopee",
+   "imagem": "https://down-br.img.susercontent.com/file/br-11134207-820lx-mqbygibr40sg7a"
+  },
+  {
+   "id": "2026-10-26-25",
+   "data": "2026-10-26",
+   "lista": "destaque",
+   "nome": "Popozuda Lisinha Redutor de Pelos Corporais com Telocapil",
+   "curto": "Popozuda Lisinha",
+   "categoria": "Beleza",
+   "preco": 59.9,
+   "preco_antigo": null,
+   "desconto": 0,
+   "vendidos": 9000,
+   "link": "https://s.shopee.com.br/30p4EZt0jG",
+   "loja": "Shopee",
+   "imagem": "https://down-br.img.susercontent.com/file/br-11134207-820lp-mu2f856jfbpe66"
+  },
+  {
+   "id": "2026-10-26-26",
+   "data": "2026-10-26",
+   "lista": "destaque",
+   "nome": "Kit Calça Jeans Skinny Masculina com Lycra",
+   "curto": "Kit Calça Jeans Masculina",
+   "categoria": "Moda Masculina",
+   "preco": 59.99,
+   "preco_antigo": 69.99,
+   "desconto": 14,
+   "vendidos": 2000,
+   "link": "https://s.shopee.com.br/3B8UQssNOJ",
+   "loja": "Shopee",
+   "imagem": "https://down-br.img.susercontent.com/file/br-11134211-7r98o-lyy5tis0j9n998"
+  },
+  {
+   "id": "2026-10-26-27",
+   "data": "2026-10-26",
+   "lista": "destaque",
+   "nome": "Daily T-shirt Insider",
+   "curto": "Camiseta Insider Daily",
+   "categoria": "Moda Masculina",
+   "preco": 139.0,
+   "preco_antigo": null,
+   "desconto": 0,
+   "vendidos": 8000,
+   "link": "https://s.shopee.com.br/6fiMbL4qDe",
+   "loja": "Shopee",
+   "imagem": "https://down-br.img.susercontent.com/file/sg-11134201-81zvr-mimqzej64v0h61"
+  },
+  {
+   "id": "2026-10-26-28",
+   "data": "2026-10-26",
+   "lista": "destaque",
+   "nome": "Lenços Umedecidos Pampers Carícia de Bebê 576 unidades",
+   "curto": "Lenços Pampers 576un",
+   "categoria": "Mãe e Bebê",
+   "preco": 136.71,
+   "preco_antigo": null,
+   "desconto": 0,
+   "vendidos": 6000,
+   "link": "https://s.shopee.com.br/6q1mne4Csh",
+   "loja": "Shopee",
+   "imagem": "https://down-br.img.susercontent.com/file/5b4a2c4487753a6da0ae4e835b39afed"
   },
   {
    "id": "2026-10-25-1",
@@ -239,6 +435,7 @@
    "desconto": 48,
    "vendidos": 10000,
    "link": "https://meli.la/1d6YGf4",
+   "loja": "Mercado Livre",
    "imagem": "https://http2.mlstatic.com/D_NQ_NP_2X_679005-MLA100674509424_122025-F.jpg"
   },
   {
@@ -253,6 +450,7 @@
    "desconto": 30,
    "vendidos": 10000,
    "link": "https://meli.la/1bLN9H6",
+   "loja": "Mercado Livre",
    "imagem": "https://http2.mlstatic.com/D_NQ_NP_2X_836450-MLA100062682691_122025-F.jpg"
   },
   {
@@ -267,6 +465,7 @@
    "desconto": 45,
    "vendidos": 1000,
    "link": "https://meli.la/19yot1D",
+   "loja": "Mercado Livre",
    "imagem": "https://http2.mlstatic.com/D_NQ_NP_2X_745487-MLA104127077302_012026-F.jpg"
   },
   {
@@ -281,6 +480,7 @@
    "desconto": 47,
    "vendidos": 1000,
    "link": "https://meli.la/2sbvNAv",
+   "loja": "Mercado Livre",
    "imagem": "https://http2.mlstatic.com/D_NQ_NP_2X_931014-MLA116155287480_092026-F.jpg"
   },
   {
@@ -295,6 +495,7 @@
    "desconto": 42,
    "vendidos": 1000,
    "link": "https://meli.la/1nz3qWm",
+   "loja": "Mercado Livre",
    "imagem": "https://http2.mlstatic.com/D_NQ_NP_2X_829818-MLA96896549102_112025-F.jpg"
   },
   {
@@ -309,6 +510,7 @@
    "desconto": 33,
    "vendidos": 5000,
    "link": "https://meli.la/2rEt7Bp",
+   "loja": "Mercado Livre",
    "imagem": "https://http2.mlstatic.com/D_NQ_NP_2X_634673-MLA105976710722_022026-F.jpg"
   },
   {
@@ -323,6 +525,7 @@
    "desconto": 22,
    "vendidos": 1000,
    "link": "https://meli.la/2QDzs87",
+   "loja": "Mercado Livre",
    "imagem": "https://http2.mlstatic.com/D_NQ_NP_2X_648185-MLB117400849434_102026-F.jpg"
   },
   {
@@ -337,6 +540,7 @@
    "desconto": 29,
    "vendidos": 1000,
    "link": "https://meli.la/1jp566q",
+   "loja": "Mercado Livre",
    "imagem": "https://http2.mlstatic.com/D_NQ_NP_2X_928705-MLA111283103903_052026-F.jpg"
   },
   {
@@ -351,6 +555,7 @@
    "desconto": 56,
    "vendidos": 500000,
    "link": "https://meli.la/2FRP2pB",
+   "loja": "Mercado Livre",
    "imagem": "https://http2.mlstatic.com/D_NQ_NP_2X_603981-MLA115262802698_082026-F.jpg"
   },
   {
@@ -365,6 +570,7 @@
    "desconto": 39,
    "vendidos": 250000,
    "link": "https://meli.la/2jxVezV",
+   "loja": "Mercado Livre",
    "imagem": "https://http2.mlstatic.com/D_NQ_NP_2X_938312-MLA120089437603_102026-F.jpg"
   },
   {
@@ -379,6 +585,7 @@
    "desconto": 50,
    "vendidos": 250000,
    "link": "https://meli.la/1yVqs3F",
+   "loja": "Mercado Livre",
    "imagem": "https://http2.mlstatic.com/D_NQ_NP_2X_981459-MLA117136184907_092026-F.jpg"
   },
   {
@@ -393,6 +600,7 @@
    "desconto": 25,
    "vendidos": 250000,
    "link": "https://meli.la/2Er6D2D",
+   "loja": "Mercado Livre",
    "imagem": "https://http2.mlstatic.com/D_NQ_NP_2X_925439-MLB95522562902_102025-F.jpg"
   },
   {
@@ -407,6 +615,7 @@
    "desconto": 42,
    "vendidos": 250000,
    "link": "https://meli.la/18eAXaf",
+   "loja": "Mercado Livre",
    "imagem": "https://http2.mlstatic.com/D_NQ_NP_2X_799787-MLB85664619217_062025-F.jpg"
   },
   {
@@ -421,6 +630,7 @@
    "desconto": 37,
    "vendidos": 250000,
    "link": "https://meli.la/1nEQhmW",
+   "loja": "Mercado Livre",
    "imagem": "https://http2.mlstatic.com/D_NQ_NP_2X_648315-MLA113252989356_072026-F.jpg"
   },
   {
@@ -435,6 +645,7 @@
    "desconto": 33,
    "vendidos": 100000,
    "link": "https://meli.la/1GEpTHX",
+   "loja": "Mercado Livre",
    "imagem": "https://http2.mlstatic.com/D_NQ_NP_2X_978965-MLB111357549836_052026-F.jpg"
   },
   {
@@ -449,6 +660,7 @@
    "desconto": 33,
    "vendidos": 100000,
    "link": "https://meli.la/2TPsgAr",
+   "loja": "Mercado Livre",
    "imagem": "https://http2.mlstatic.com/D_NQ_NP_2X_918307-MLA118847501699_102026-F.jpg"
   },
   {
@@ -463,6 +675,7 @@
    "desconto": 43,
    "vendidos": 1000,
    "link": "https://meli.la/23AA6xU",
+   "loja": "Mercado Livre",
    "imagem": null
   },
   {
@@ -477,6 +690,7 @@
    "desconto": 39,
    "vendidos": 50000,
    "link": "https://meli.la/2TheiGf",
+   "loja": "Mercado Livre",
    "imagem": null
   },
   {
@@ -491,6 +705,7 @@
    "desconto": 35,
    "vendidos": 1000,
    "link": "https://meli.la/2RrDGby",
+   "loja": "Mercado Livre",
    "imagem": null
   },
   {
@@ -505,6 +720,7 @@
    "desconto": 44,
    "vendidos": 1000,
    "link": "https://meli.la/15HRrzD",
+   "loja": "Mercado Livre",
    "imagem": null
   },
   {
@@ -519,6 +735,7 @@
    "desconto": 23,
    "vendidos": 10000,
    "link": "https://meli.la/2Tnj1Se",
+   "loja": "Mercado Livre",
    "imagem": null
   },
   {
@@ -533,6 +750,7 @@
    "desconto": 51,
    "vendidos": 1000,
    "link": "https://meli.la/2KnJxgX",
+   "loja": "Mercado Livre",
    "imagem": null
   },
   {
@@ -547,6 +765,7 @@
    "desconto": 35,
    "vendidos": 5000,
    "link": "https://meli.la/23PQBUh",
+   "loja": "Mercado Livre",
    "imagem": null
   },
   {
@@ -561,6 +780,7 @@
    "desconto": 54,
    "vendidos": 5000,
    "link": "https://meli.la/1pj51fm",
+   "loja": "Mercado Livre",
    "imagem": "https://http2.mlstatic.com/D_NQ_NP_2X_773728-MLB116246249633_082026-F.jpg"
   },
   {
@@ -575,6 +795,7 @@
    "desconto": 38,
    "vendidos": 1000000,
    "link": "https://meli.la/1He9YYB",
+   "loja": "Mercado Livre",
    "imagem": "https://http2.mlstatic.com/D_NQ_NP_2X_662415-MLA97812910758_112025-F.jpg"
   },
   {
@@ -589,6 +810,7 @@
    "desconto": 70,
    "vendidos": 750000,
    "link": "https://meli.la/1qjACUt",
+   "loja": "Mercado Livre",
    "imagem": "https://http2.mlstatic.com/D_NQ_NP_2X_605306-MLA119872143535_102026-F.jpg"
   },
   {
@@ -603,6 +825,7 @@
    "desconto": 43,
    "vendidos": 250000,
    "link": "https://meli.la/2F5mjnK",
+   "loja": "Mercado Livre",
    "imagem": "https://http2.mlstatic.com/D_NQ_NP_2X_694546-MLA117038112537_092026-F.jpg"
   },
   {
@@ -617,6 +840,7 @@
    "desconto": 47,
    "vendidos": 250000,
    "link": "https://meli.la/2Um9R1Z",
+   "loja": "Mercado Livre",
    "imagem": "https://http2.mlstatic.com/D_NQ_NP_2X_636204-MLB92283366432_092025-F.jpg"
   },
   {
@@ -631,6 +855,7 @@
    "desconto": 54,
    "vendidos": 250000,
    "link": "https://meli.la/2sATgdm",
+   "loja": "Mercado Livre",
    "imagem": null
   },
   {
@@ -645,6 +870,7 @@
    "desconto": 29,
    "vendidos": 250000,
    "link": "https://meli.la/2VatgKq",
+   "loja": "Mercado Livre",
    "imagem": "https://http2.mlstatic.com/D_NQ_NP_2X_861479-MLA99503246768_112025-F.jpg"
   },
   {
@@ -659,6 +885,7 @@
    "desconto": 46,
    "vendidos": 100000,
    "link": "https://meli.la/1KEn1sk",
+   "loja": "Mercado Livre",
    "imagem": "https://http2.mlstatic.com/D_NQ_NP_2X_698189-MLB117166353073_092026-F.jpg"
   },
   {
@@ -673,6 +900,7 @@
    "desconto": 59,
    "vendidos": 100000,
    "link": "https://meli.la/1V8XNqa",
+   "loja": "Mercado Livre",
    "imagem": "https://http2.mlstatic.com/D_NQ_NP_2X_917659-MLA112161611883_052026-F.jpg"
   }
  ]
