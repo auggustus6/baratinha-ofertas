@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 """Gera produtos.json (vitrine pública) a partir da aba "Fila" da planilha.
+Aceita links do Mercado Livre (meli.la) e da Shopee (s.shopee.com.br / shope.ee).
 
 Uso: python3 scripts/gerar_produtos.py <fila.json> [produtos.json]
 
@@ -8,11 +9,22 @@ ou a lista de linhas direto). Só colunas públicas vão para o site: comissão,
 ganhos, remetente, status e texto da postagem ficam de fora.
 """
 import json
+import re
 import sys
 from datetime import date, datetime, timedelta, timezone
 
 JANELA_DIAS = 7  # hoje + 6 dias anteriores
 TZ = timezone(timedelta(hours=-3))
+SHOPEE_RE = re.compile(r"^https://([a-z0-9-]+\.)*(shopee\.com\.br|shope\.ee)/")
+
+
+def loja_de(link):
+    """Loja pelo link de afiliado: meli.la = Mercado Livre; s.shopee.com.br/shope.ee = Shopee."""
+    if link.startswith("https://meli.la/"):
+        return "Mercado Livre"
+    if SHOPEE_RE.match(link):
+        return "Shopee"
+    return None
 
 
 def num(v):
@@ -47,7 +59,8 @@ def main():
     for r in rows[1:]:
         link = str(g(r, "link") or "")
         dia = str(g(r, "data") or "").lstrip("'")[:10]
-        if not link.startswith("https://meli.la/") or len(dia) != 10:
+        loja = loja_de(link)
+        if not loja or len(dia) != 10:
             continue
         lista = str(g(r, "lista") or "").lower()
         itens.append({
@@ -62,6 +75,7 @@ def main():
             "desconto": int(num(g(r, "desconto_pct")) or 0),
             "vendidos": int(num(g(r, "vendidos")) or 0),
             "link": link,
+            "loja": loja,
             "imagem": (g(r, "imagem") or None) if str(g(r, "imagem") or "").startswith("https://") else None,
         })
 

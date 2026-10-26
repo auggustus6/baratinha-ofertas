@@ -3,10 +3,10 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Rotina Baratinha — ofertas do Mercado Livre escolhidas todo dia</title>
-<meta name="description" content="Os mais vendidos e os maiores descontos do Mercado Livre, selecionados todo dia. Você compra direto no Mercado Livre.">
-<meta property="og:title" content="Rotina Baratinha — ofertas do Mercado Livre escolhidas todo dia">
-<meta property="og:description" content="Os mais vendidos e os maiores descontos do Mercado Livre, selecionados todo dia.">
+<title>Rotina Baratinha — ofertas do Mercado Livre e da Shopee escolhidas todo dia</title>
+<meta name="description" content="Os mais vendidos e os maiores descontos do Mercado Livre e da Shopee, selecionados todo dia. Você compra direto na loja.">
+<meta property="og:title" content="Rotina Baratinha — ofertas do Mercado Livre e da Shopee escolhidas todo dia">
+<meta property="og:description" content="Os mais vendidos e os maiores descontos do Mercado Livre e da Shopee, selecionados todo dia.">
 <meta name="theme-color" content="#FAF8F3">
 <link rel="icon" type="image/png" href="favicon.png">
 <link rel="apple-touch-icon" href="logo.png">
@@ -104,6 +104,9 @@ button{font:inherit;color:inherit;cursor:pointer}
 .badge.white{background:#fff;color:var(--ink);border:1px solid var(--line)}
 .off{position:absolute;bottom:12px;right:12px;background:var(--ink);color:#fff;font-size:12px;font-weight:700;padding:5px 9px;border-radius:999px}
 .card .bd{padding:16px 16px 16px;display:flex;flex-direction:column;flex:1}
+.store{display:inline-block;font-size:10px;font-weight:700;letter-spacing:.04em;padding:3px 8px;border-radius:999px;margin-bottom:8px;width:max-content}
+.store.ml{background:#FFF3B0;color:#2D3277}
+.store.sp{background:#FFE4DC;color:#C93A12}
 .card .cat{font-size:10.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--gold-ink)}
 .card h3{font-size:14.5px;font-weight:500;line-height:1.35;margin:8px 0 6px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;min-height:2.7em}
 .card .meta{font-size:12.5px;color:var(--ink-2);margin:0 0 14px}
@@ -178,7 +181,7 @@ footer p{margin:0 0 8px;max-width:70em}
     <div class="top-row">
       <a class="brand" href="/" aria-label="Início">
         <img src="logo.png" alt="" width="48" height="48">
-        <span><b id="siteName">Rotina Baratinha</b><small>OFERTAS DO MERCADO LIVRE</small></span>
+        <span><b id="siteName">Rotina Baratinha</b><small>OFERTAS MERCADO LIVRE E SHOPEE</small></span>
       </a>
       <label class="search">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
@@ -198,7 +201,7 @@ footer p{margin:0 0 8px;max-width:70em}
     <div class="hero-txt">
       <div class="eyebrow">Ofertas selecionadas todo dia</div>
       <h1>Achados com desconto de verdade, escolhidos a dedo toda manhã.</h1>
-      <p>Garimpamos os mais vendidos e os maiores descontos do Mercado Livre e trazemos aqui. Você compra direto no Mercado Livre, com pagamento, entrega e garantia de lá.</p>
+      <p>Garimpamos os mais vendidos e os maiores descontos do Mercado Livre e da Shopee e trazemos aqui. Você compra direto na loja, com pagamento, entrega e garantia de lá.</p>
       <div class="btns">
         <a class="btn btn-dark" href="#ofertas">Ver ofertas</a>
         <a class="btn btn-line js-group" href="#" target="_blank" rel="noopener">Entrar no grupo</a>
@@ -209,9 +212,9 @@ footer p{margin:0 0 8px;max-width:70em}
 
   <div class="perks">
     <div class="perk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/></svg><div><b>Seleção diária</b><span>Lista nova toda manhã, com os preços do dia.</span></div></div>
-    <div class="perk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 7h16l-1.5 11a2 2 0 0 1-2 1.7H7.5a2 2 0 0 1-2-1.7L4 7Z"/><path d="M9 7V5.5a3 3 0 0 1 6 0V7"/></svg><div><b>Compra no Mercado Livre</b><span>Pagamento, frete e garantia direto por lá.</span></div></div>
+    <div class="perk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 7h16l-1.5 11a2 2 0 0 1-2 1.7H7.5a2 2 0 0 1-2-1.7L4 7Z"/><path d="M9 7V5.5a3 3 0 0 1 6 0V7"/></svg><div><b>Compra direto na loja</b><span>Mercado Livre ou Shopee: pagamento, frete e garantia por lá.</span></div></div>
     <div class="perk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1-4.4-4.3 6.1-.9L12 3Z"/></svg><div><b>Só os mais vendidos</b><span>Produtos com milhares de vendas e boa procura.</span></div></div>
-    <div class="perk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20.5 11.6a8.4 8.4 0 0 1-12.4 7.4L3.5 20.5 5 16.1A8.4 8.4 0 1 1 20.5 11.6Z"/></svg><div><b>Ofertas no WhatsApp</b><span>Receba no grupo ao longo da manhã.</span></div></div>
+    <div class="perk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20.5 11.6a8.4 8.4 0 0 1-12.4 7.4L3.5 20.5 5 16.1A8.4 8.4 0 1 1 20.5 11.6Z"/></svg><div><b>Ofertas no WhatsApp</b><span>Receba no grupo de manhã e à noite.</span></div></div>
   </div>
 
   <div id="ofertas"></div>
@@ -219,8 +222,8 @@ footer p{margin:0 0 8px;max-width:70em}
 
 <footer>
   <div class="wrap">
-    <p><b id="footName">Rotina Baratinha</b> participa do programa de afiliados do Mercado Livre. Ao comprar pelos links deste site, podemos receber uma comissão, sem nenhum custo extra para você.</p>
-    <p>Preços, descontos e estoque são do Mercado Livre e podem mudar a qualquer momento. Confira sempre o valor final no anúncio antes de comprar.</p>
+    <p><b id="footName">Rotina Baratinha</b> participa dos programas de afiliados do Mercado Livre e da Shopee. Ao comprar pelos links deste site, podemos receber uma comissão, sem nenhum custo extra para você.</p>
+    <p>Preços, descontos e estoque são das lojas (Mercado Livre e Shopee) e podem mudar a qualquer momento. Confira sempre o valor final no anúncio antes de comprar.</p>
     <p id="stamp"></p>
   </div>
 </footer>
@@ -258,6 +261,8 @@ function parseCSV(t){
   return rows;
 }
 const brNum = v => { let s = String(v ?? "").replace(/R\$|\s/g,""); if (!s) return null; if (s.includes(",")) s = s.replace(/\./g,"").replace(",","."); const n = parseFloat(s); return isNaN(n) ? null : n; };
+const lojaDe = l => /^https:\/\/meli\.la\//.test(l) ? "Mercado Livre" : /^https:\/\/([a-z0-9-]+\.)*(shopee\.com\.br|shope\.ee)\//.test(l) ? "Shopee" : null;
+const lojaOf = p => p.loja || "Mercado Livre";
 function fromSheet(csv){
   const rows = parseCSV(csv); const h = rows[0].map(x => x.trim().toLowerCase()); const ix = k => h.indexOf(k);
   const g = (r,k) => (ix(k) >= 0 ? (r[ix(k)] || "").trim() : "");
@@ -266,8 +271,8 @@ function fromSheet(csv){
     return { id: `${dia}-${g(r,"n")}`, data: dia, lista: ["a","comissao","comissão"].includes(lista) ? "destaque" : "volume",
       nome: g(r,"produto"), curto: g(r,"remetente") || g(r,"produto"), categoria: g(r,"categoria") || "Outros",
       preco: brNum(g(r,"preco")), preco_antigo: brNum(g(r,"preco_antigo")), desconto: Math.round(brNum(g(r,"desconto_pct")) || 0),
-      vendidos: Math.round(brNum(g(r,"vendidos")) || 0), link: g(r,"link"), imagem: img.startsWith("https://") ? img : null };
-  }).filter(p => /^\d{4}-\d{2}-\d{2}$/.test(p.data) && p.link.startsWith("https://meli.la/"));
+      vendidos: Math.round(brNum(g(r,"vendidos")) || 0), link: g(r,"link"), loja: lojaDe(g(r,"link")), imagem: img.startsWith("https://") ? img : null };
+  }).filter(p => /^\d{4}-\d{2}-\d{2}$/.test(p.data) && p.loja);
   const ultimo = items.reduce((m,p) => p.data > m ? p.data : m, "");
   const corte = new Date(ultimo + "T12:00:00"); corte.setDate(corte.getDate() - (CONFIG.janelaDias - 1));
   const corteIso = corte.toISOString().slice(0,10);
@@ -306,6 +311,7 @@ function card(p){
       ${badge}${p.desconto ? `<span class="off">-${p.desconto}%</span>` : ""}
     </a>
     <div class="bd">
+      <span class="store ${lojaOf(p)==="Shopee"?"sp":"ml"}">${esc(lojaOf(p))}</span>
       <div class="cat">${esc(p.categoria)}</div>
       <h3>${esc(p.nome)}</h3>
       <p class="meta">${vend(p.vendidos)}</p>
@@ -332,15 +338,15 @@ function band(){
     <div class="band-dark">
       <div class="eyebrow">Ofertas no WhatsApp</div>
       <h2>Receba as melhores ofertas do dia direto no seu celular.</h2>
-      <p>Mandamos as ofertas no grupo ao longo da manhã, com foto, preço e link. Sem spam: só o que vale a pena.</p>
+      <p>Mandamos as ofertas no grupo de manhã e à noite, com foto, preço e link. Sem spam: só o que vale a pena.</p>
       <a class="btn btn-white js-group" href="#" target="_blank" rel="noopener">Entrar no grupo</a>
     </div>
     <div class="band-light">
       <div class="eyebrow">Como funciona</div>
       <ol class="steps">
         <li><i>1</i><span><b>Escolha a oferta</b> que te interessa aqui no site.</span></li>
-        <li><i>2</i><span><b>Clique em “Ver oferta”</b> e você vai direto para o anúncio no Mercado Livre.</span></li>
-        <li><i>3</i><span><b>Compre pelo Mercado Livre</b>, com o pagamento, a entrega e a garantia de sempre.</span></li>
+        <li><i>2</i><span><b>Clique em “Ver oferta”</b> e você vai direto para o anúncio na loja.</span></li>
+        <li><i>3</i><span><b>Compre pelo Mercado Livre ou pela Shopee</b>, com o pagamento, a entrega e a garantia de sempre.</span></li>
       </ol>
     </div>
   </div>`;
@@ -371,7 +377,7 @@ function render(){
   const destaques = base.filter(p=>p.lista==="destaque").slice(0,8);
   const descontos = [...ALL].sort((a,b)=>b.desconto-a.desconto).slice(0,4);
   const cats = [...new Set(ALL.map(p=>p.categoria))];
-  let html = section("mais-vendidos","Mais vendidos","Os produtos que mais saem no Mercado Livre entre as ofertas da semana.",vendidos,"Ver todos","vendidos");
+  let html = section("mais-vendidos","Mais vendidos","Os produtos que mais saem entre as ofertas da semana.",vendidos,"Ver todos","vendidos");
   html += section("destaques","Destaques do dia",`Ofertas selecionadas em ${dm(DIA)}.`,destaques,"Ver todos","destaques");
   html += band();
   html += section("descontos","Maiores descontos","Os maiores percentuais de desconto da semana.",descontos,"Ver todos","desconto");
@@ -390,7 +396,7 @@ function hero(){
   el.innerHTML = pool.map((p,i)=>`<a class="slide${i?"":" on"}" href="${esc(p.link)}" target="_blank" rel="sponsored nofollow noopener">
       <div class="ph"><img src="${esc(p.imagem)}" alt="" onerror="this.replaceWith(document.createRange().createContextualFragment(ICON))"></div>
       <div class="info"><span class="tag">-${p.desconto}% hoje</span><h3>${esc(p.curto || p.nome)}</h3>
-        ${p.preco_antigo ? `<div class="de">${BRL(p.preco_antigo)}</div>` : ""}<div class="por">${BRL(p.preco)}</div><span class="go">Ver no Mercado Livre</span></div>
+        ${p.preco_antigo ? `<div class="de">${BRL(p.preco_antigo)}</div>` : ""}<div class="por">${BRL(p.preco)}</div><span class="go">${lojaOf(p)==="Shopee"?"Ver na Shopee":"Ver no Mercado Livre"}</span></div>
     </a>`).join("") + `<div class="dots"><span>Oferta <em id="sn">1</em> de ${pool.length}</span>${pool.map((_,i)=>`<i data-i="${i}" class="${i?"":"on"}"></i>`).join("")}</div>`;
   let cur = 0; const slides = el.querySelectorAll(".slide"), dots = el.querySelectorAll(".dots i");
   const go = i => { slides[cur].classList.remove("on"); dots[cur].classList.remove("on"); cur = i; slides[cur].classList.add("on"); dots[cur].classList.add("on"); $("#sn").textContent = cur+1; };
@@ -425,7 +431,7 @@ document.addEventListener("click", e => {
 let t; $("#q").addEventListener("input", e => { clearTimeout(t); t = setTimeout(()=>{ state.q = e.target.value; state.view = state.q ? "todas" : null; render(); }, 180); });
 
 (async function init(){
-  document.title = `${CONFIG.nome} — ofertas do Mercado Livre escolhidas todo dia`;
+  document.title = `${CONFIG.nome} — ofertas do Mercado Livre e da Shopee escolhidas todo dia`;
   $("#siteName").textContent = CONFIG.nome; $("#footName").textContent = CONFIG.nome;
   bindGroup();
   try{
@@ -436,7 +442,7 @@ let t; $("#q").addEventListener("input", e => { clearTimeout(t); t = setTimeout(
     const hoje = ALL.filter(p=>p.data===DIA).length;
     $("#countTop").textContent = hoje; $("#countBar").textContent = hoje;
     $("#barTitle").textContent = `${hoje} ofertas novas em ${dm(DIA)}`;
-    $("#barSub").textContent = `${ALL.length} ofertas da semana no site. Preços podem mudar no Mercado Livre.`;
+    $("#barSub").textContent = `${ALL.length} ofertas da semana no site. Preços podem mudar nas lojas.`;
     $("#bar").hidden = false;
     const at = d.atualizado_em ? new Date(d.atualizado_em) : null;
     $("#stamp").textContent = at ? `Lista atualizada em ${at.toLocaleDateString("pt-BR",{timeZone:"America/Sao_Paulo"})} às ${at.toLocaleTimeString("pt-BR",{hour:"2-digit",minute:"2-digit",timeZone:"America/Sao_Paulo"})}.` : `Ofertas de ${dm(DIA)}.`;
