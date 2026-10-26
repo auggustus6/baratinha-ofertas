@@ -1,7 +1,7 @@
 {
- "atualizado_em": "2026-10-26T10:49-03:00",
+ "atualizado_em": "2026-10-26T12:36-03:00",
  "ultimo_dia": "2026-10-26",
- "total": 60,
+ "total": 56,
  "produtos": [
   {
    "id": "2026-10-26-1",
@@ -182,66 +182,6 @@
    "link": "https://meli.la/1XiFM2c",
    "loja": "Mercado Livre",
    "imagem": "https://http2.mlstatic.com/D_NQ_NP_2X_737130-MLA99503062202_112025-F.jpg"
-  },
-  {
-   "id": "2026-10-26-13",
-   "data": "2026-10-26",
-   "lista": "destaque",
-   "nome": "Kit Multi Ferramentas 4 Em 1 48v Sem Fio Com 2 Baterias Furadeira Parafusadeira Martelete Esmerilhadeira Chave",
-   "curto": "Kit Multi Ferramentas 4 em 1",
-   "categoria": "Ferramentas",
-   "preco": 703.56,
-   "preco_antigo": 1599.0,
-   "desconto": 56,
-   "vendidos": 5000,
-   "link": "https://meli.la/2M946cc",
-   "loja": "Mercado Livre",
-   "imagem": "https://http2.mlstatic.com/D_NQ_NP_2X_803813-MLA117249332440_102026-F.jpg"
-  },
-  {
-   "id": "2026-10-26-14",
-   "data": "2026-10-26",
-   "lista": "destaque",
-   "nome": "Carro Elétrico Infantil Policial 6v Frente/Ré Maxi Toys - AZUL",
-   "curto": "Carro Elétrico Policial",
-   "categoria": "Brinquedos",
-   "preco": 378.2,
-   "preco_antigo": 699.9,
-   "desconto": 45,
-   "vendidos": 1000,
-   "link": "https://meli.la/2pBn1nT",
-   "loja": "Mercado Livre",
-   "imagem": "https://http2.mlstatic.com/D_NQ_NP_2X_835541-MLA99987777875_112025-F.jpg"
-  },
-  {
-   "id": "2026-10-26-15",
-   "data": "2026-10-26",
-   "lista": "destaque",
-   "nome": "Roçadeira A Gasolina Nakasaki 75cc 6 Em 1 3,6hp",
-   "curto": "Roçadeira Nakasaki 75cc",
-   "categoria": "Ferramentas",
-   "preco": 422.99,
-   "preco_antigo": 849.0,
-   "desconto": 50,
-   "vendidos": 5000,
-   "link": "https://meli.la/1HLNYUj",
-   "loja": "Mercado Livre",
-   "imagem": "https://http2.mlstatic.com/D_NQ_NP_2X_941214-MLB117311637498_102026-F.jpg"
-  },
-  {
-   "id": "2026-10-26-16",
-   "data": "2026-10-26",
-   "lista": "destaque",
-   "nome": "Espelho Orgânico com LED 170x70 cm Ideal para Quarto, Banheiro, Escritório, Hall e Sala - Modelo Flame",
-   "curto": "Espelho Orgânico LED",
-   "categoria": "Casa",
-   "preco": 309.9,
-   "preco_antigo": 395.6,
-   "desconto": 21,
-   "vendidos": 10000,
-   "link": "https://meli.la/2rCjVuz",
-   "loja": "Mercado Livre",
-   "imagem": "https://http2.mlstatic.com/D_NQ_NP_2X_843202-MLA96434907158_102025-F.jpg"
   },
   {
    "id": "2026-10-26-17",

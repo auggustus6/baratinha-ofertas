@@ -62,6 +62,8 @@ def main():
         loja = loja_de(link)
         if not loja or len(dia) != 10:
             continue
+        if str(g(r, "status") or "").strip().lower() == "cancelado":
+            continue  # tirado da fila (fora do perfil): não vai para o site
         lista = str(g(r, "lista") or "").lower()
         itens.append({
             "id": f"{dia}-{g(r, 'n')}",
