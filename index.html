@@ -435,6 +435,9 @@ function bindGroup(){
 }
 
 document.addEventListener("click", e => {
+  // Lead: clique em "Entrar no grupo" no site
+  const g = e.target.closest(".js-group, #groupPill");
+  if (g && CONFIG.grupo){ try { fbq('track', 'Lead', { content_name: 'grupo_whatsapp', content_category: 'botao_site' }); } catch (err) {} }
   const c = e.target.closest("[data-cat]");
   if (c){ state.cat = c.dataset.cat; state.view = null; nav(); render(); window.scrollTo({top:$("#ofertas").offsetTop-140, behavior:"smooth"}); return; }
   const m = e.target.closest("[data-more]");
