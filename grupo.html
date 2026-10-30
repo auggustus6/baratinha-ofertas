@@ -40,6 +40,17 @@ h2{font:600 18px/1.3 Georgia,"Times New Roman",serif;margin:30px 0 12px}
 .offer strong{font-size:16px}
 .offer .d{display:inline-block;margin-left:6px;background:#FDECE3;color:var(--red);font-weight:700;font-size:12px;border-radius:6px;padding:1px 6px}
 .offer .s{color:var(--ink-3);font-size:12.5px}
+.hero{display:none;background:var(--card);border:2px solid var(--wa);border-radius:18px;padding:14px;margin:0 0 14px;text-align:center;position:relative}
+.hero.on{display:block}
+.hero .tag{display:inline-block;background:var(--wa);color:#fff;font-weight:700;font-size:12px;letter-spacing:.04em;text-transform:uppercase;border-radius:999px;padding:3px 10px;margin-bottom:10px}
+.hero img{width:150px;height:150px;object-fit:contain;display:block;margin:0 auto 8px;background:#fff;border-radius:12px}
+.hero .t{font-weight:700;font-size:17px;line-height:1.25}
+.hero .p{margin-top:6px}
+.hero s{color:var(--ink-3);margin-right:8px;font-size:15px}
+.hero strong{font-size:26px;letter-spacing:-.01em}
+.hero .d{display:inline-block;margin-left:8px;background:#FDECE3;color:var(--red);font-weight:800;font-size:14px;border-radius:8px;padding:2px 8px;vertical-align:4px}
+.hero .s{color:var(--ink-3);font-size:13px;margin-top:4px}
+.hero .lk{margin-top:8px;font-size:13.5px;color:var(--ink-2)}
 footer{margin-top:26px;color:var(--ink-3);font-size:12px;text-align:center}
 footer a{color:inherit}
 </style>
@@ -64,23 +75,25 @@ src="https://www.facebook.com/tr?id=1451244229722387&ev=PageView&noscript=1"
 <body>
 <main>
   <img class="logo" src="/logo-512.jpg" alt="Rotina Baratinha">
-  <h1>Ofertas do dia direto no seu WhatsApp</h1>
-  <p class="lead">Todo dia a gente separa os produtos mais vendidos do Mercado Livre e da Shopee que estão com desconto e manda no grupo. Você só escolhe o que quer.</p>
+  <h1 id="h1">A oferta de hoje está no nosso grupo</h1>
+  <p class="lead" id="lead">Entre no grupo de WhatsApp da Rotina Baratinha e pegue o link com o desconto. Todo dia tem achados novos dos mais vendidos do Mercado Livre e da Shopee.</p>
 
-  <ul class="perks">
-    <li><span class="ic">✓</span><div><b>Casa, bebê, beleza e moda</b><span>Itens do dia a dia, com foto, preço e link da loja.</span></div></li>
-    <li><span class="ic">✓</span><div><b>Só de manhã e à noite</b><span>Sem enxurrada de mensagens.</span></div></li>
-    <li><span class="ic">✓</span><div><b>Grátis e sem cadastro</b><span>Você compra direto no Mercado Livre ou na Shopee, com a garantia deles.</span></div></li>
-  </ul>
+  <div class="hero" id="hero"></div>
 
   <a class="btn js-join" href="https://chat.whatsapp.com/JYVKd50DD9pBjHozafHTYl" data-pos="topo">
     <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3Z"/></svg>
-    Entrar no grupo do WhatsApp
+    <span id="btnTxt">Entrar no grupo e pegar a oferta</span>
   </a>
-  <span class="note">Abre o WhatsApp. Depois é só tocar em “Entrar no grupo”.</span>
+  <span class="note">Grátis. Abre o WhatsApp — é só tocar em “Entrar no grupo”.</span>
+
+  <ul class="perks" style="margin-top:22px">
+    <li><span class="ic">✓</span><div><b>Casa, bebê, beleza e moda</b><span>Itens do dia a dia, com foto, preço e link da loja.</span></div></li>
+    <li><span class="ic">✓</span><div><b>Só de manhã e à noite</b><span>Sem enxurrada de mensagens.</span></div></li>
+    <li><span class="ic">✓</span><div><b>Você compra direto na loja</b><span>Mercado Livre ou Shopee, com a garantia deles. Sem cadastro.</span></div></li>
+  </ul>
 
   <div id="hoje" hidden>
-    <h2>Algumas ofertas que saíram hoje</h2>
+    <h2>Outras ofertas que saíram hoje</h2>
     <div class="offers" id="offers"></div>
     <a class="btn js-join" href="https://chat.whatsapp.com/JYVKd50DD9pBjHozafHTYl" data-pos="ofertas">
       <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3Z"/></svg>
@@ -116,6 +129,24 @@ src="https://www.facebook.com/tr?id=1451244229722387&ev=PageView&noscript=1"
     var vistos = {}, escolhidos = [];
     doDia.forEach(function(p){ if (escolhidos.length < 3 && !vistos[p.categoria]) { vistos[p.categoria] = 1; escolhidos.push(p); } });
     doDia.forEach(function(p){ if (escolhidos.length < 3 && escolhidos.indexOf(p) < 0) escolhidos.push(p); });
+    // Oferta-gancho: entre as do dia com bom desconto, a mais vendida
+    var foco = /casa|beb|beleza/i;
+    var boas = doDia.filter(function(p){ return (p.desconto || 0) >= 30 && p.preco_antigo > p.preco && foco.test(p.categoria || ''); });
+    if (!boas.length) boas = doDia.filter(function(p){ return (p.desconto || 0) >= 30 && p.preco_antigo > p.preco; });
+    boas.sort(function(a, b){ return (b.vendidos || 0) - (a.vendidos || 0) || (b.desconto || 0) - (a.desconto || 0); });
+    var h = boas[0] || doDia[0];
+    if (h) {
+      var hero = document.getElementById('hero');
+      hero.innerHTML = '<span class="tag">Oferta de hoje no grupo</span>' +
+        '<img src="' + esc(h.imagem) + '" alt="">' +
+        '<div class="t">' + esc(h.curto || h.nome) + '</div>' +
+        '<div class="p">' + (h.preco_antigo > h.preco ? '<s>' + brl(h.preco_antigo) + '</s>' : '') + '<strong>' + brl(h.preco) + '</strong>' + (h.desconto ? '<span class="d">-' + esc(h.desconto) + '%</span>' : '') + '</div>' +
+        '<div class="s">' + esc(h.loja || '') + (fmtQ(h.vendidos) ? ' · ' + fmtQ(h.vendidos) : '') + '</div>' +
+        '<div class="lk">O link com esse preço está no grupo 👇</div>';
+      hero.classList.add('on');
+      escolhidos = escolhidos.filter(function(p){ return p !== h; });
+      doDia.forEach(function(p){ if (escolhidos.length < 3 && p !== h && escolhidos.indexOf(p) < 0) escolhidos.push(p); });
+    }
     if (!escolhidos.length) return;
     document.getElementById('offers').innerHTML = escolhidos.map(function(p){
       var antigo = p.preco_antigo && p.preco_antigo > p.preco ? '<s>' + brl(p.preco_antigo) + '</s>' : '';
