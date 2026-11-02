@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="pt-BR"><head><meta charset="utf-8">
+<style>
+@font-face{font-family:"RB";font-weight:600;src:url(fonts/InterDisplay-SemiBold.otf)}
+@font-face{font-family:"RB";font-weight:700;src:url(fonts/InterDisplay-Bold.otf)}
+@font-face{font-family:"RB";font-weight:800;src:url(fonts/InterDisplay-ExtraBold.otf)}
+@font-face{font-family:"RB";font-weight:900;src:url(fonts/InterDisplay-Black.otf)}
+:root{--rose:#B5485D;--rose-d:#8E2F44;--ink:#3B1F24;--red:#E5383B}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1080px;height:1920px;overflow:hidden}
+body{font-family:"RB",sans-serif;color:var(--ink);-webkit-font-smoothing:antialiased;background:#F4E6DD}
+.abs{position:absolute;will-change:transform,opacity}
+.emj{font-family:"Noto Color Emoji";font-weight:400}
+#bg{left:0;top:0;width:1080px;height:1920px;background:linear-gradient(180deg,#E9CFC4 0%,#F1DED5 50%,#F7ECE5 100%)}
+#bg:after{content:"";position:absolute;inset:0;background-image:radial-gradient(rgba(181,72,93,.07) 3px,transparent 3.5px);background-size:46px 46px}
+#pcard{left:50px;top:250px;width:520px;height:1330px;border-radius:52px;overflow:hidden;box-shadow:0 30px 70px rgba(59,31,36,.25);background:#ddd}
+#pose{position:absolute;left:50%;top:50%;height:100%;width:auto;min-width:100%;object-fit:cover;transform:translate(-50%,-50%)}
+#bubble{left:600px;top:240px;width:440px;min-height:250px;background:#fff;border-radius:56px;box-shadow:0 22px 50px rgba(59,31,36,.18);transform-origin:0% 100%}
+#bubble:after{content:"";position:absolute;left:-26px;bottom:42px;width:70px;height:60px;background:#fff;clip-path:polygon(100% 0,0 100%,100% 70%)}
+.bt{position:absolute;left:38px;right:38px;top:50%;transform:translateY(-50%);font-weight:900;letter-spacing:-.03em;line-height:1.04}
+.bt em{font-style:normal;color:var(--rose)}
+#b1{font-size:88px}#b2,#b3,#b4{font-size:56px}
+#card{left:600px;top:620px;width:440px;height:520px;background:#fff;border-radius:44px;box-shadow:0 26px 60px rgba(59,31,36,.22);overflow:hidden;transform-origin:50% 0%}
+#prod{position:absolute;left:50%;top:50%;max-width:390px;max-height:470px;transform:translate(-50%,-50%)}
+#title{left:600px;top:1160px;width:440px;text-align:center;font-weight:800;line-height:1.1}
+#title small{display:block;font-weight:600;font-size:32px;color:#7d6a6d;margin-top:6px}
+#badge{left:880px;top:570px;width:180px;height:180px;border-radius:50%;background:var(--red);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:64px;letter-spacing:-.04em;box-shadow:0 16px 36px rgba(229,56,59,.35)}
+#panel{left:50px;top:1150px;width:980px;height:410px;background:#fff;border-radius:56px;box-shadow:0 26px 70px rgba(59,31,36,.25);overflow:hidden}
+#de{position:absolute;left:0;right:0;top:36px;text-align:center;font-size:58px;font-weight:700;color:#7d6a6d}
+#strike{position:absolute;top:71px;height:8px;background:var(--red);border-radius:6px}
+#por{position:absolute;left:0;right:0;top:104px;text-align:center;font-weight:900;letter-spacing:-.045em;line-height:1}
+#por span{font-size:186px}
+#vend{position:absolute;left:0;right:0;top:310px;text-align:center;font-size:40px;font-weight:800;color:var(--rose-d)}
+#cta{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px}
+#cta .row{display:flex;align-items:center;gap:26px}
+#cta img{width:140px;height:140px;border-radius:50%}
+#cta .btn{height:140px;padding:0 54px;border-radius:999px;background:var(--rose);color:#fff;display:flex;align-items:center;gap:18px;font-size:68px;font-weight:900;letter-spacing:-.02em;box-shadow:0 14px 0 var(--rose-d)}
+#cta .h{font-size:40px;font-weight:700}
+#cta .a{font-size:30px;font-weight:600;color:#8a7478}
+</style></head>
+<body>
+<div id="bg" class="abs"></div>
+<div id="pcard" class="abs"><img id="pose"></div>
+<div id="bubble" class="abs">
+  <div id="b1" class="bt">Achei hoje <span class="emj">👀</span></div>
+  <div id="b2" class="bt"></div>
+  <div id="b3" class="bt">O link com esse preço tá no <em>meu grupo</em> <span class="emj">💗</span></div>
+  <div id="b4" class="bt">Te espero <em>lá!</em> <span class="emj">💗</span></div>
+</div>
+<div id="card" class="abs"><img id="prod"></div>
+<div id="title" class="abs"></div>
+<div id="badge" class="abs"></div>
+<div id="panel" class="abs">
+  <div id="price">
+    <div id="de"></div><div id="strike"></div>
+    <div id="por"><span id="pr"></span></div>
+    <div id="vend"></div>
+  </div>
+  <div id="cta">
+    <div class="row"><img src="logo.jpg"><div class="btn">Link na bio <span style="font-size:72px;line-height:1">↑</span></div></div>
+    <div class="h">@rotina.baratinha · grupo grátis no WhatsApp</div>
+    <div class="a" id="aviso"></div>
+  </div>
+</div>
+<script>
+const $=id=>document.getElementById(id);
+const cl=(x,a=0,b=1)=>Math.max(a,Math.min(b,x));
+const p=(t,a,b)=>cl((t-a)/(b-a));
+const oc=x=>1-Math.pow(1-x,3);
+const io=x=>x<.5?4*x*x*x:1-Math.pow(-2*x+2,3)/2;
+const ob=x=>{const c1=1.70158,c3=c1+1;return 1+c3*Math.pow(x-1,3)+c1*Math.pow(x-1,2)};
+const lerp=(a,b,x)=>a+(b-a)*x;
+const brl=v=>'R$ '+Number(v).toFixed(2).replace('.',',');
+function st(id,o,tf){const e=$(id);e.style.opacity=o;e.style.transform=tf||'none';}
+let D=null, VEND=0;
+function fitText(el,max,min){let s=max;el.style.fontSize=s+'px';while((el.scrollWidth>el.clientWidth||el.scrollHeight>el.clientHeight)&&s>min){s-=2;el.style.fontSize=s+'px';}}
+window.setup=async function(data){
+  D=data; VEND=Number(data.vendidos)||0;
+  $('pose').src=data.pose; $('prod').src=data.produto;
+  $('b2').innerHTML='Olha esse achado '+(data.loja==='Shopee'?'da <em>Shopee</em>':'do <em>Mercado Livre</em>')+'!';
+  $('title').innerHTML=data.nome+'<small>'+data.loja+'</small>';
+  $('title').style.fontSize='42px';
+  const hasOld=data.preco_antigo&&data.preco_antigo>data.preco;
+  $('de').textContent=hasOld?('de '+brl(data.preco_antigo)):'';
+  $('pr').textContent=brl(data.preco);
+  $('badge').textContent=data.desconto?('-'+data.desconto+'%'):'';
+  $('badge').style.display=data.desconto?'flex':'none';
+  $('aviso').textContent='Preço do dia na '+data.loja.replace('Mercado Livre','loja')+', pode mudar.';
+  await Promise.all([...document.images].map(i=>i.complete&&i.naturalWidth?0:new Promise(r=>{i.onload=i.onerror=r})));
+  await document.fonts.ready;
+  // ajusta preço grande e título para caber
+  const por=$('pr'); let fs=186; por.style.fontSize=fs+'px'; while(por.offsetWidth>900&&fs>110){fs-=4;por.style.fontSize=fs+'px';}
+  const deW=$('de').textContent? (()=>{const s=document.createElement('span');s.style.cssText='font:700 58px RB;visibility:hidden;position:absolute';s.textContent=$('de').textContent;document.body.appendChild(s);const w=s.offsetWidth;s.remove();return w;})():0;
+  window.__deW=deW;
+  return true;
+};
+function vendTxt(n){ if(VEND>=1000){const k=Math.round(lerp(0,VEND/1000,n));return '+'+k+' mil vendidos';} return VEND?('+'+Math.round(lerp(0,VEND,n))+' vendidos'):''; }
+const B=[['b1',0.35,3.0],['b2',3.0,7.0],['b3',10.6,13.6],['b4',13.6,16.6]];
+window.render=function(t){
+  // card da personagem: entra com zoom
+  const pc=oc(p(t,0,0.6));
+  st('pcard', pc, `translateY(${lerp(60,0,pc)}px)`);
+  $('pose').style.transform=`translate(-50%,-50%) scale(${lerp(1.12,1.0,io(p(t,0,4)))})`;
+  // balão
+  let bubPop=1;
+  for(const [id,a,z] of B){const inn=oc(p(t,a,a+0.3)),out=(z<16.6)?io(p(t,z-0.25,z)):0;$(id).style.opacity=(t>=a-0.01&&t<z)?inn*(1-out):0;if(t>=a&&t<a+0.45)bubPop=Math.min(bubPop,lerp(.6,1,ob(p(t,a,a+0.45))));}
+  const bo=t<7.0?p(t,0.35,0.5)*(1-io(p(t,6.75,7.0))):(t<10.55?0:oc(p(t,10.55,10.8)));
+  st('bubble',bo,`scale(${bubPop})`);
+  // produto
+  const cIn=ob(p(t,3.2,3.75)), sh=io(p(t,6.8,7.4));
+  st('card',p(t,3.2,3.35),`translateX(${lerp(520,0,cIn)}px) translateY(${lerp(0,-80,sh)}px) scale(${lerp(1,0.78,sh)})`);
+  $('prod').style.transform=`translate(-50%,-50%) scale(${lerp(1,1.06,p(t,3.2,16.6))})`;
+  const tIn=oc(p(t,3.7,4.1)), tOut=io(p(t,6.6,6.9));
+  st('title',tIn*(1-tOut),`translateY(${lerp(30,0,tIn)}px)`);
+  const bd=ob(p(t,8.3,8.75));
+  st('badge',p(t,8.3,8.4),`translateY(-60px) scale(${bd}) rotate(${lerp(-80,10,oc(p(t,8.3,8.8)))+Math.sin(t*3)*3}deg)`);
+  // painel preço -> CTA
+  const pIn=oc(p(t,6.9,7.4));
+  st('panel',p(t,6.9,7.0),`translateY(${lerp(500,0,pIn)}px)`);
+  const tc=io(p(t,13.4,13.9));
+  $('price').style.opacity=1-tc; $('cta').style.opacity=tc; $('cta').style.transform=`translateY(${lerp(40,0,tc)}px)`;
+  $('de').style.opacity=oc(p(t,7.4,7.7));
+  const sk=io(p(t,7.8,8.1)), sw=(window.__deW||0)+20;
+  $('strike').style.left=((980-sw)/2)+'px'; $('strike').style.width=(sw*sk)+'px'; $('strike').style.opacity=(sk>0&&window.__deW)?1:0;
+  const pr=ob(p(t,8.2,8.65));
+  $('por').style.opacity=p(t,8.2,8.3); $('por').style.transform=`scale(${lerp(.3,1,pr)})`; $('por').style.transformOrigin='50% 60%';
+  $('vend').style.opacity=oc(p(t,8.9,9.3));
+  const vt=vendTxt(oc(p(t,8.9,9.9)));
+  $('vend').innerHTML=(vt?'⭐ '+vt+' · ':'')+'preço do dia, pode mudar';
+  const pulse=1+0.035*Math.sin((t-14.6)*7)*cl(p(t,14.4,14.6));
+  document.querySelector('#cta .btn').style.transform=`scale(${pulse})`;
+};
+</script>
+</body></html>

@@ -1,0 +1,89 @@
+name: Reel diário (Instagram)
+
+# Roda sozinho depois de cada curadoria (o commit "Vitrine: ofertas de DD/MM" muda o produtos.json)
+# e também pode ser disparado à mão em Actions > Reel diário > Run workflow.
+on:
+  push:
+    branches: [main]
+    paths: [produtos.json]
+  workflow_dispatch:
+    inputs:
+      produto_id:
+        description: 'ID do produto (vazio = melhor oferta do dia)'
+        required: false
+      pose:
+        description: 'Número da pose 1-8 (vazio = rodízio)'
+        required: false
+      publicar:
+        description: 'Publicar no Instagram?'
+        type: boolean
+        default: true
+      forcar:
+        description: 'Gerar mesmo se já houver Reel hoje'
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+concurrency:
+  group: reel-diario
+  cancel-in-progress: false
+
+jobs:
+  reel:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Instalar ffmpeg, emoji e navegador
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq ffmpeg fonts-noto-color-emoji
+          npm install --no-save --no-package-lock playwright@1.48.2
+          npx playwright install --with-deps chromium
+
+      - name: Gerar o Reel
+        run: |
+          ARGS=""
+          [ -n "${{ inputs.produto_id }}" ] && ARGS="$ARGS --id ${{ inputs.produto_id }}"
+          [ -n "${{ inputs.pose }}" ] && ARGS="$ARGS --pose ${{ inputs.pose }}"
+          [ "${{ inputs.forcar }}" = "true" ] && ARGS="$ARGS --forcar"
+          node reels/gerar_reel.mjs $ARGS
+
+      - name: Guardar o vídeo (Artifacts, 14 dias)
+        if: hashFiles('reels/saida/reel.mp4') != ''
+        uses: actions/upload-artifact@v4
+        with:
+          name: reel-${{ github.run_number }}
+          path: |
+            reels/saida/reel.mp4
+            reels/saida/oferta.json
+          retention-days: 14
+
+      - name: Publicar no Instagram
+        if: hashFiles('reels/saida/reel.mp4') != '' && (github.event_name == 'push' || inputs.publicar)
+        env:
+          IG_TOKEN: ${{ secrets.IG_TOKEN }}
+          IG_USER_ID: ${{ secrets.IG_USER_ID }}
+        run: |
+          if [ -z "$IG_TOKEN" ] || [ -z "$IG_USER_ID" ]; then
+            echo "::warning::Secrets IG_TOKEN/IG_USER_ID não configurados — o Reel ficou só nos Artifacts."
+            exit 0
+          fi
+          node reels/publicar_instagram.mjs
+
+      - name: Registrar no histórico
+        if: hashFiles('reels/saida/oferta.json') != ''
+        run: |
+          node reels/registrar_historico.mjs
+          git config user.name "rotina-baratinha-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add reels/historico.json
+          git diff --cached --quiet || git commit -m "Reel: $(node -p "require('./reels/saida/oferta.json').curto") [skip ci]"
+          git pull --rebase -q && git push -q
