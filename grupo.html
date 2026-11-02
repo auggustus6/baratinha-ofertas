@@ -135,6 +135,17 @@ src="https://www.facebook.com/tr?id=1451244229722387&ev=PageView&noscript=1"
     if (!boas.length) boas = doDia.filter(function(p){ return (p.desconto || 0) >= 30 && p.preco_antigo > p.preco; });
     boas.sort(function(a, b){ return (b.vendidos || 0) - (a.vendidos || 0) || (b.desconto || 0) - (a.desconto || 0); });
     var h = boas[0] || doDia[0];
+    // ?oferta=termo -> mostra no topo o produto do anúncio (busca no nome/curto, mais recente primeiro)
+    try {
+      var q = (new URLSearchParams(location.search).get('oferta') || '').toLowerCase().trim();
+      if (q) {
+        var norm = function(x){ return String(x || '').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, ''); };
+        var qq = norm(q);
+        var achados = lista.filter(function(p){ return p.imagem && p.preco && (norm(p.curto).indexOf(qq) >= 0 || norm(p.nome).indexOf(qq) >= 0); });
+        achados.sort(function(a, b){ return String(b.data).localeCompare(String(a.data)); });
+        if (achados[0]) h = achados[0];
+      }
+    } catch (e) {}
     if (h) {
       var hero = document.getElementById('hero');
       hero.innerHTML = '<span class="tag">Oferta de hoje no grupo</span>' +
