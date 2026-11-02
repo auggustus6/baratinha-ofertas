@@ -77,15 +77,15 @@ function fitText(el,max,min){let s=max;el.style.fontSize=s+'px';while((el.scroll
 window.setup=async function(data){
   D=data; VEND=Number(data.vendidos)||0;
   $('pose').src=data.pose; $('prod').src=data.produto; FOCO=data.foco??0.5;
-  $('b2').innerHTML='Olha esse achado '+(data.loja==='Shopee'?'da <em>Shopee</em>':'do <em>Mercado Livre</em>')+'!';
-  $('title').innerHTML=data.nome+'<small>'+data.loja+'</small>';
+  $('b2').innerHTML='Olha o que achei no <em>meu grupo</em>!';
+  $('title').innerHTML=data.nome;
   $('title').style.fontSize='42px';
   const hasOld=data.preco_antigo&&data.preco_antigo>data.preco;
   $('de').textContent=hasOld?('de '+brl(data.preco_antigo)):'';
   $('pr').textContent=brl(data.preco);
   $('badge').textContent=data.desconto?('-'+data.desconto+'%'):'';
   $('badge').style.display=data.desconto?'flex':'none';
-  $('aviso').textContent='Preço do dia na '+data.loja.replace('Mercado Livre','loja')+', pode mudar.';
+  $('aviso').textContent='Preço do dia, pode mudar.';
   await Promise.all([...document.images].map(i=>i.complete&&i.naturalWidth?0:new Promise(r=>{i.onload=i.onerror=r})));
   await document.fonts.ready;
   // enquadra a personagem: altura do cartão, centrada no ponto de foco da pose
