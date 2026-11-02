@@ -19,7 +19,7 @@ const arg = (k) => { const i = process.argv.indexOf('--' + k); return i > 0 ? pr
 const dados = JSON.parse(fs.readFileSync(path.join(ROOT, 'produtos.json'), 'utf8'));
 const histPath = path.join(DIR, 'historico.json');
 const hist = fs.existsSync(histPath) ? JSON.parse(fs.readFileSync(histPath, 'utf8')) : [];
-const recentes = new Set(hist.slice(-14).map(h => (h.nome || '').toLowerCase()));
+const recentes = new Set(hist.filter(h => h.publicado).slice(-14).map(h => (h.nome || '').toLowerCase()));
 const dia = dados.ultimo_dia;
 // um Reel por dia: se já saiu o de hoje, não faz outro (a menos que --forcar)
 if (hist.some(h => h.dia === dia && h.publicado) && !process.argv.includes('--forcar')) {
