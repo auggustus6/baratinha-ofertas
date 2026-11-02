@@ -1,4 +1,5 @@
-// Publica reels/saida/reel.mp4 como Reel no Instagram (sem legenda), pela Graph API.
+// Publica reels/saida/reel.mp4 como Reel no Instagram, pela Graph API.
+// Legenda: reels/legenda.txt (ou IG_CAPTION). Capa: o frame em IG_CAPA_MS (padrão 7,6 s = produto + preço + selo).
 // Precisa das variáveis IG_TOKEN e IG_USER_ID (GitHub Secrets). Nunca coloque o token no código.
 // Uso: node reels/publicar_instagram.mjs [caminho.mp4]
 import fs from 'node:fs';
@@ -21,8 +22,10 @@ async function api(url, opts = {}) {
 const q = (o) => new URLSearchParams({ ...o, access_token: IG_TOKEN }).toString();
 
 // 1. cria o container de Reel com upload resumível
-const legenda = process.env.IG_CAPTION || '';
-const cont = await api(`${GRAPH}/${IG_USER_ID}/media?` + q({ media_type: 'REELS', upload_type: 'resumable', share_to_feed: 'true', ...(legenda ? { caption: legenda } : {}) }), { method: 'POST' });
+const legPath = path.join(DIR, 'legenda.txt');
+const legenda = process.env.IG_CAPTION || (fs.existsSync(legPath) ? fs.readFileSync(legPath, 'utf8').trim() : '');
+const capaMs = process.env.IG_CAPA_MS || '7600';
+const cont = await api(`${GRAPH}/${IG_USER_ID}/media?` + q({ media_type: 'REELS', upload_type: 'resumable', share_to_feed: 'true', thumb_offset: capaMs, ...(legenda ? { caption: legenda } : {}) }), { method: 'POST' });
 console.log('Container', cont.id);
 
 // 2. envia o arquivo

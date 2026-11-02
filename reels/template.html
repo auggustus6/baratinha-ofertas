@@ -102,7 +102,7 @@ const B=[['b1',0.35,3.0],['b2',3.0,7.0],['b3',10.6,13.6],['b4',13.6,16.6]];
 function renderBase(t){
   // card da personagem: entra com zoom
   const pc=oc(p(t,0,0.6));
-  st('pcard', pc, `translateY(${lerp(60,0,pc)}px)`);
+  st('pcard', 1, `translateY(${lerp(40,0,pc)}px)`); // já visível no 1º frame (feed e capa nunca ficam vazios)
   $('pose').style.transform=`scale(${lerp(1.12,1.0,io(p(t,0,4)))})`;
   // balão
   let bubPop=1;
