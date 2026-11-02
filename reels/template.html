@@ -99,7 +99,7 @@ window.setup=async function(data){
 };
 function vendTxt(n){ if(VEND>=1000){const k=Math.round(lerp(0,VEND/1000,n));return '+'+k+' mil vendidos';} return VEND?('+'+Math.round(lerp(0,VEND,n))+' vendidos'):''; }
 const B=[['b1',0.35,3.0],['b2',3.0,7.0],['b3',10.6,13.6],['b4',13.6,16.6]];
-window.render=function(t){
+function renderBase(t){
   // card da personagem: entra com zoom
   const pc=oc(p(t,0,0.6));
   st('pcard', pc, `translateY(${lerp(60,0,pc)}px)`);
@@ -132,6 +132,14 @@ window.render=function(t){
   $('vend').innerHTML=(vt?'⭐ '+vt+' · ':'')+'preço do dia, pode mudar';
   const pulse=1+0.035*Math.sin((t-14.6)*7)*cl(p(t,14.4,14.6));
   document.querySelector('#cta .btn').style.transform=`scale(${pulse})`;
+};
+// Ritmo: as animações mantêm a velocidade e só as pausas entre elas encolhem.
+// Pares [tempo do vídeo final, tempo da animação base]; entre eles a conversão é linear.
+const RITMO=[[0,0],[0.8,0.8],[1.8,2.75],[3.15,4.1],[4.3,6.6],[7.7,10.0],[7.85,10.55],[8.2,10.9],[9.2,13.15],[10.05,14.0],[11.5,16.6]];
+window.DURACAO=11.5;
+window.render=function(t){
+  for(let i=1;i<RITMO.length;i++){const [a0,b0]=RITMO[i-1],[a1,b1]=RITMO[i];
+    if(t<=a1||i===RITMO.length-1){return renderBase(b0+(b1-b0)*cl((t-a0)/(a1-a0)));}}
 };
 </script>
 </body></html>

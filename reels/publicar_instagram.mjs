@@ -47,8 +47,23 @@ for (let i = 0; i < 40; i++) {
 }
 if (status !== 'FINISHED') throw new Error('Tempo esgotado esperando o processamento');
 
-// 4. publica
-const pub = await api(`${GRAPH}/${IG_USER_ID}/media_publish?` + q({ creation_id: cont.id }), { method: 'POST' });
+// 4. publica — o Instagram às vezes devolve "erro interno genérico" (2207085), que é temporário:
+// tenta de novo algumas vezes, sempre conferindo antes se o post já não saiu (para não duplicar)
+let pub = null;
+for (let tent = 1; tent <= 6 && !pub; tent++) {
+  try {
+    pub = await api(`${GRAPH}/${IG_USER_ID}/media_publish?` + q({ creation_id: cont.id }), { method: 'POST' });
+  } catch (e) {
+    console.log(`Tentativa ${tent} falhou:`, e.message);
+    if (tent === 6) throw e;
+    await new Promise(r => setTimeout(r, 30000 * tent));
+    const s = await api(`${GRAPH}/${cont.id}?` + q({ fields: 'status_code' })).catch(() => ({}));
+    if (s.status_code === 'PUBLISHED') {
+      const ult = await api(`${GRAPH}/${IG_USER_ID}/media?` + q({ fields: 'id', limit: '1' }));
+      pub = { id: ult.data?.[0]?.id }; console.log('Já tinha sido publicado.');
+    }
+  }
+}
 const info = await api(`${GRAPH}/${pub.id}?` + q({ fields: 'permalink' })).catch(() => ({}));
 console.log('Publicado', pub.id, info.permalink || '');
 fs.writeFileSync(path.join(DIR, 'saida', 'publicado.json'), JSON.stringify({ id: pub.id, permalink: info.permalink || null }, null, 2));

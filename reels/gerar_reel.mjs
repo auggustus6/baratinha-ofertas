@@ -67,7 +67,8 @@ console.log('Oferta:', data.nome, '|', data.loja, '|', data.preco, '| pose', pos
 
 // ---------- 4. render: um arquivo por cena, depois concat ----------
 const FPS = 30;
-const cenas = [[0, 3.0], [3.0, 6.9], [6.9, 10.5], [10.5, 13.4], [13.4, 16.6]];
+// cortes nas pausas (tempos do vídeo final, ver RITMO no template.html)
+const cenas = [[0, 1.8], [1.8, 4.3], [4.3, 7.85], [7.85, 10.05], [10.05, 11.5]];
 const run = (cmd, args, input) => new Promise((res, rej) => {
   const pr = spawn(cmd, args, { stdio: [input ? 'pipe' : 'ignore', 'ignore', 'inherit'] });
   pr.on('close', c => c === 0 ? res() : rej(new Error(cmd + ' saiu com ' + c)));
@@ -79,7 +80,7 @@ await page.goto('file://' + path.join(DIR, 'template.html'));
 await page.evaluate(d => window.setup(d), data);
 // --previa: só tira fotos dos momentos mais cheios, para conferir antes do render completo
 if (process.argv.includes('--previa')) {
-  for (const t of [1.5, 5.5, 9.8, 12.0, 15.5]) {
+  for (const t of [1.2, 3.0, 6.6, 8.6, 11.0]) {
     await page.evaluate(t => window.render(t), t);
     await page.screenshot({ path: path.join(OUT, `previa_${t}.jpg`), type: 'jpeg', quality: 85 });
   }
@@ -110,22 +111,22 @@ await run('ffmpeg', ['-y', '-loglevel', 'error', '-f', 'concat', '-safe', '0', '
 // [arquivo, segundo em que toca, volume]
 const SFX = [
   ['plim1.wav', 0.35, 0.9],    // balão "Achei hoje"
-  ['whoosh.wav', 3.05, 0.7],   // produto entrando
-  ['carta.wav', 3.45, 0.8],    // cartão do produto pousa
-  ['whoosh.wav', 6.85, 0.55],  // painel de preço sobe
-  ['risco.wav', 7.8, 1.0],     // risca o preço antigo
-  ['revelacao.wav', 8.15, 0.8],// preço novo aparece
-  ['sinos.wav', 8.35, 0.8],    // selo de desconto
-  ['plim2.wav', 10.6, 0.9],    // balão "O link tá no meu grupo"
-  ['presente.wav', 13.4, 1.0], // vira o convite "Link na bio"
-  ['plim3.wav', 13.65, 0.9],   // balão "Te espero lá"
+  ['whoosh.wav', 2.1, 0.7],    // produto entrando
+  ['carta.wav', 2.5, 0.8],     // cartão do produto pousa
+  ['whoosh.wav', 4.55, 0.55],  // painel de preço sobe
+  ['risco.wav', 5.5, 1.0],     // risca o preço antigo
+  ['revelacao.wav', 5.85, 0.8],// preço novo aparece
+  ['sinos.wav', 6.05, 0.8],    // selo de desconto
+  ['plim2.wav', 7.9, 0.9],     // balão "O link tá no meu grupo"
+  ['presente.wav', 9.45, 1.0], // vira o convite "Link na bio"
+  ['plim3.wav', 9.7, 0.9],     // balão "Te espero lá"
 ];
 const sfxDir = path.join(DIR, 'sfx');
 const efeitos = SFX.filter(([f]) => fs.existsSync(path.join(sfxDir, f)));
 const musDir = path.join(DIR, 'musica');
 const musicas = fs.existsSync(musDir) ? fs.readdirSync(musDir).filter(f => /\.(mp3|m4a|wav)$/i.test(f)) : [];
 const final = path.join(OUT, 'reel.mp4');
-const DUR = 16.6;
+const DUR = 11.5;
 const ins = ['-i', semAudio], partes = [];
 efeitos.forEach(([f, t, v], k) => {
   ins.push('-i', path.join(sfxDir, f));
