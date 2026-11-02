@@ -13,8 +13,8 @@ body{font-family:"RB",sans-serif;color:var(--ink);-webkit-font-smoothing:antiali
 .emj{font-family:"Noto Color Emoji";font-weight:400}
 #bg{left:0;top:0;width:1080px;height:1920px;background:linear-gradient(180deg,#E9CFC4 0%,#F1DED5 50%,#F7ECE5 100%)}
 #bg:after{content:"";position:absolute;inset:0;background-image:radial-gradient(rgba(181,72,93,.07) 3px,transparent 3.5px);background-size:46px 46px}
-#pcard{left:50px;top:250px;width:520px;height:1330px;border-radius:52px;overflow:hidden;box-shadow:0 30px 70px rgba(59,31,36,.25);background:#ddd}
-#pose{position:absolute;left:50%;top:50%;height:100%;width:auto;min-width:100%;object-fit:cover;transform:translate(-50%,-50%)}
+#pcard{left:40px;top:250px;width:545px;height:1330px;border-radius:52px;overflow:hidden;box-shadow:0 30px 70px rgba(59,31,36,.25);background:#ddd}
+#pose{position:absolute;left:0;top:0;height:100%;width:auto}
 #bubble{left:600px;top:240px;width:440px;min-height:250px;background:#fff;border-radius:56px;box-shadow:0 22px 50px rgba(59,31,36,.18);transform-origin:0% 100%}
 #bubble:after{content:"";position:absolute;left:-26px;bottom:42px;width:70px;height:60px;background:#fff;clip-path:polygon(100% 0,0 100%,100% 70%)}
 .bt{position:absolute;left:38px;right:38px;top:50%;transform:translateY(-50%);font-weight:900;letter-spacing:-.03em;line-height:1.04}
@@ -72,11 +72,11 @@ const ob=x=>{const c1=1.70158,c3=c1+1;return 1+c3*Math.pow(x-1,3)+c1*Math.pow(x-
 const lerp=(a,b,x)=>a+(b-a)*x;
 const brl=v=>'R$ '+Number(v).toFixed(2).replace('.',',');
 function st(id,o,tf){const e=$(id);e.style.opacity=o;e.style.transform=tf||'none';}
-let D=null, VEND=0;
+let D=null, VEND=0, FOCO=0.5;
 function fitText(el,max,min){let s=max;el.style.fontSize=s+'px';while((el.scrollWidth>el.clientWidth||el.scrollHeight>el.clientHeight)&&s>min){s-=2;el.style.fontSize=s+'px';}}
 window.setup=async function(data){
   D=data; VEND=Number(data.vendidos)||0;
-  $('pose').src=data.pose; $('prod').src=data.produto;
+  $('pose').src=data.pose; $('prod').src=data.produto; FOCO=data.foco??0.5;
   $('b2').innerHTML='Olha esse achado '+(data.loja==='Shopee'?'da <em>Shopee</em>':'do <em>Mercado Livre</em>')+'!';
   $('title').innerHTML=data.nome+'<small>'+data.loja+'</small>';
   $('title').style.fontSize='42px';
@@ -88,6 +88,9 @@ window.setup=async function(data){
   $('aviso').textContent='Preço do dia na '+data.loja.replace('Mercado Livre','loja')+', pode mudar.';
   await Promise.all([...document.images].map(i=>i.complete&&i.naturalWidth?0:new Promise(r=>{i.onload=i.onerror=r})));
   await document.fonts.ready;
+  // enquadra a personagem: altura do cartão, centrada no ponto de foco da pose
+  { const im=$('pose'), H=1330, W=545; const w=im.naturalWidth*H/im.naturalHeight; im.style.width=w+'px';
+    const left=Math.min(0,Math.max(W-w, W/2-FOCO*w)); im.style.left=left+'px'; im.style.transformOrigin=`${FOCO*100}% 30%`; }
   // ajusta preço grande e título para caber
   const por=$('pr'); let fs=186; por.style.fontSize=fs+'px'; while(por.offsetWidth>900&&fs>110){fs-=4;por.style.fontSize=fs+'px';}
   const deW=$('de').textContent? (()=>{const s=document.createElement('span');s.style.cssText='font:700 58px RB;visibility:hidden;position:absolute';s.textContent=$('de').textContent;document.body.appendChild(s);const w=s.offsetWidth;s.remove();return w;})():0;
@@ -100,7 +103,7 @@ window.render=function(t){
   // card da personagem: entra com zoom
   const pc=oc(p(t,0,0.6));
   st('pcard', pc, `translateY(${lerp(60,0,pc)}px)`);
-  $('pose').style.transform=`translate(-50%,-50%) scale(${lerp(1.12,1.0,io(p(t,0,4)))})`;
+  $('pose').style.transform=`scale(${lerp(1.12,1.0,io(p(t,0,4)))})`;
   // balão
   let bubPop=1;
   for(const [id,a,z] of B){const inn=oc(p(t,a,a+0.3)),out=(z<16.6)?io(p(t,z-0.25,z)):0;$(id).style.opacity=(t>=a-0.01&&t<z)?inn*(1-out):0;if(t>=a&&t<a+0.45)bubPop=Math.min(bubPop,lerp(.6,1,ob(p(t,a,a+0.45))));}

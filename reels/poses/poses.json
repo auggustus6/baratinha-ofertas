@@ -1,0 +1,6 @@
+{
+  "_sobre": "foco = posição horizontal (0 a 1) do centro da personagem na foto; o cartão corta as laterais em volta desse ponto",
+  "pose1.jpg": { "foco": 0.53 },
+  "pose2.jpg": { "foco": 0.49 },
+  "pose3.jpg": { "foco": 0.57 }
+}

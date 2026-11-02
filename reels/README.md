@@ -4,8 +4,8 @@ Todo dia, depois da curadoria (commit `Vitrine: ofertas de DD/MM` no `produtos.j
 (`.github/workflows/reel-diario.yml`):
 
 1. escolhe a **melhor oferta do dia** (Shopee ou Mercado Livre): desconto ≥ 20%, maior `desconto × log(vendidos)`, sem repetir produto dos últimos 14 Reels;
-2. baixa a foto do produto e escolhe a **pose da personagem** (`poses/pose1..8.jpg`, rodízio por dia, nunca igual à de ontem);
-3. monta o vídeo 1080×1920, 16,6 s, a partir do `template.html` (Playwright + ffmpeg);
+2. baixa a foto do produto e escolhe a **pose da personagem** (`poses/poseN.jpg`, rodízio por dia, nunca igual à de ontem);
+3. monta o vídeo 1080×1920, 16,6 s, a partir do `template.html` (Playwright + ffmpeg), com efeitos sonoros de `sfx/` no ritmo das animações;
 4. publica como Reel no Instagram, **sem legenda** (se os secrets `IG_TOKEN` e `IG_USER_ID` existirem);
 5. anota em `historico.json`.
 
@@ -18,8 +18,9 @@ No computador: `node reels/gerar_reel.mjs [--id ID] [--pose N] [--produto-img fo
 (`--previa` só tira 5 fotos dos momentos principais em `reels/saida/`).
 
 ## Personalizar
-- **Poses:** troque/adicione arquivos `poses/poseN.jpg` (retrato, ~540×1400 ou maior).
-- **Música:** coloque faixas livres de direitos em `reels/musica/*.mp3`; uma é sorteada por Reel. Sem música, o áudio é mudo.
+- **Poses:** adicione `poses/poseN.jpg` (vertical, ≥1000×1400) e o `foco` dela em `poses/poses.json` (0 a 1: onde fica o centro da personagem na largura da foto).
+- **Efeitos sonoros:** `sfx/*.wav`; quando e com que volume cada um toca está na lista `SFX` do `gerar_reel.mjs`.
+- **Música:** coloque faixas livres de direitos em `reels/musica/*.mp3`; uma é sorteada por Reel e toca baixinho por baixo dos efeitos.
 - **Textos e cores:** `template.html` (falas do balão em `#b1..#b4`).
 
 ## Segurança

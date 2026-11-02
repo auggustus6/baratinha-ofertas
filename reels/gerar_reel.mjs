@@ -61,6 +61,7 @@ const data = {
   nome: oferta.curto || oferta.nome, loja: oferta.loja || 'Mercado Livre',
   preco: oferta.preco, preco_antigo: oferta.preco_antigo, desconto: oferta.desconto, vendidos: oferta.vendidos,
   pose: 'poses/' + pose, produto: 'file://' + path.resolve(prodImg),
+  foco: (() => { try { return JSON.parse(fs.readFileSync(path.join(DIR, 'poses', 'poses.json'), 'utf8'))[pose]?.foco ?? 0.5; } catch { return 0.5; } })(),
 };
 console.log('Oferta:', data.nome, '|', data.loja, '|', data.preco, '| pose', pose);
 
@@ -105,16 +106,43 @@ fs.writeFileSync(lista, arquivos.map(f => `file '${f}'`).join('\n'));
 const semAudio = path.join(OUT, 'video.mp4');
 await run('ffmpeg', ['-y', '-loglevel', 'error', '-f', 'concat', '-safe', '0', '-i', lista, '-c', 'copy', semAudio]);
 
-// ---------- 5. áudio: música livre de direitos em reels/musica/ (opcional), senão silêncio ----------
+// ---------- 5. áudio: efeitos sonoros (reels/sfx) no ritmo das animações + música opcional (reels/musica) ----------
+// [arquivo, segundo em que toca, volume]
+const SFX = [
+  ['plim1.wav', 0.35, 0.9],    // balão "Achei hoje"
+  ['whoosh.wav', 3.05, 0.7],   // produto entrando
+  ['carta.wav', 3.45, 0.8],    // cartão do produto pousa
+  ['whoosh.wav', 6.85, 0.55],  // painel de preço sobe
+  ['risco.wav', 7.8, 1.0],     // risca o preço antigo
+  ['revelacao.wav', 8.15, 0.8],// preço novo aparece
+  ['sinos.wav', 8.35, 0.8],    // selo de desconto
+  ['plim2.wav', 10.6, 0.9],    // balão "O link tá no meu grupo"
+  ['presente.wav', 13.4, 1.0], // vira o convite "Link na bio"
+  ['plim3.wav', 13.65, 0.9],   // balão "Te espero lá"
+];
+const sfxDir = path.join(DIR, 'sfx');
+const efeitos = SFX.filter(([f]) => fs.existsSync(path.join(sfxDir, f)));
 const musDir = path.join(DIR, 'musica');
 const musicas = fs.existsSync(musDir) ? fs.readdirSync(musDir).filter(f => /\.(mp3|m4a|wav)$/i.test(f)) : [];
 const final = path.join(OUT, 'reel.mp4');
+const DUR = 16.6;
+const ins = ['-i', semAudio], partes = [];
+efeitos.forEach(([f, t, v], k) => {
+  ins.push('-i', path.join(sfxDir, f));
+  const ms = Math.round(t * 1000);
+  partes.push(`[${k + 1}:a]aformat=sample_rates=48000:channel_layouts=stereo,volume=${v},adelay=${ms}|${ms}[s${k}]`);
+});
 if (musicas.length) {
-  const m = path.join(musDir, musicas[Math.floor(Math.random() * musicas.length)]);
-  await run('ffmpeg', ['-y', '-loglevel', 'error', '-i', semAudio, '-i', m, '-map', '0:v', '-map', '1:a', '-c:v', 'copy',
-    '-af', 'afade=t=in:d=0.5,afade=t=out:st=15.6:d=1,volume=0.8', '-c:a', 'aac', '-b:a', '160k', '-shortest', '-movflags', '+faststart', final]);
+  ins.push('-i', path.join(musDir, musicas[Math.floor(Math.random() * musicas.length)]));
+  partes.push(`[${efeitos.length + 1}:a]aformat=sample_rates=48000:channel_layouts=stereo,volume=0.35,afade=t=in:d=0.5,afade=t=out:st=${DUR - 1}:d=1[mus]`);
+}
+const rotulos = efeitos.map((_, k) => `[s${k}]`).concat(musicas.length ? ['[mus]'] : []);
+if (rotulos.length) {
+  const grafo = partes.join(';') + `;${rotulos.join('')}amix=inputs=${rotulos.length}:normalize=0,volume=2.5,alimiter=limit=0.89,apad,atrim=0:${DUR}[a]`;
+  await run('ffmpeg', ['-y', '-loglevel', 'error', ...ins, '-filter_complex', grafo, '-map', '0:v', '-map', '[a]',
+    '-c:v', 'copy', '-c:a', 'aac', '-b:a', '160k', '-ar', '48000', '-movflags', '+faststart', final]);
 } else {
-  await run('ffmpeg', ['-y', '-loglevel', 'error', '-i', semAudio, '-f', 'lavfi', '-i', 'anullsrc=r=44100:cl=stereo',
+  await run('ffmpeg', ['-y', '-loglevel', 'error', '-i', semAudio, '-f', 'lavfi', '-i', 'anullsrc=r=48000:cl=stereo',
     '-c:v', 'copy', '-c:a', 'aac', '-shortest', '-movflags', '+faststart', final]);
 }
 fs.writeFileSync(path.join(OUT, 'oferta.json'), JSON.stringify({ ...oferta, pose, dia }, null, 2));
