@@ -8,5 +8,15 @@
     "pose": "pose2.jpg",
     "publicado": false,
     "permalink": null
+  },
+  {
+    "dia": "2026-11-02",
+    "id": "2026-11-01-1",
+    "nome": "Kit 2 Tapetes Banheiro",
+    "loja": "Mercado Livre",
+    "preco": 25.9,
+    "pose": "pose2.jpg",
+    "publicado": true,
+    "permalink": "https://www.instagram.com/reel/DfPlLGxgV-e/"
   }
 ]
