@@ -1,6 +1,6 @@
 {
-  "_sobre": "foco = posição horizontal (0 a 1) do centro da personagem na foto; o cartão corta as laterais em volta desse ponto",
-  "pose1.jpg": { "foco": 0.53 },
-  "pose2.jpg": { "foco": 0.49 },
-  "pose3.jpg": { "foco": 0.57 }
+  "_sobre": "poseN.png = personagem sem fundo (recortada pela transparência), sorteada a cada Reel. foco só vale para fotos .jpg com fundo (centro horizontal da personagem, 0 a 1).",
+  "pose1.png": {},
+  "pose2.png": {},
+  "pose3.png": {}
 }

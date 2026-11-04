@@ -47,20 +47,25 @@ if (!prodImg) {
   fs.writeFileSync(prodImg, Buffer.from(await r.arrayBuffer()));
 }
 
-// ---------- 3. pose da personagem (gira por dia, sem repetir a de ontem) ----------
-const poses = fs.readdirSync(path.join(DIR, 'poses')).filter(f => /^pose\d+\.(jpg|png)$/.test(f)).sort();
+// ---------- 3. pose da personagem (sorteada a cada Reel, nunca igual à de ontem) ----------
+// As poses recortadas (poseN.png, sem fundo) têm prioridade; as .jpg antigas só entram se não houver PNG.
+const todas = fs.readdirSync(path.join(DIR, 'poses')).filter(f => /^pose\d+\.(jpg|png)$/.test(f)).sort();
+const pngs = todas.filter(f => f.endsWith('.png'));
+const poses = pngs.length ? pngs : todas;
 const ultimaPose = hist.length ? hist[hist.length - 1].pose : null;
-let pose = arg('pose') ? `pose${arg('pose')}.jpg` : null;
-if (!pose) {
-  const doy = Math.floor((new Date(dia + 'T12:00:00') - new Date(dia.slice(0, 4) + '-01-01T00:00:00')) / 864e5);
-  pose = poses[doy % poses.length];
-  if (pose === ultimaPose) pose = poses[(doy + 1) % poses.length];
+let pose = null;
+if (arg('pose')) {
+  const n = arg('pose');
+  pose = [`pose${n}.png`, `pose${n}.jpg`].find(f => todas.includes(f)) || `pose${n}.png`;
+} else {
+  const candidatas = poses.length > 1 ? poses.filter(f => f !== ultimaPose) : poses;
+  pose = candidatas[Math.floor(Math.random() * candidatas.length)];
 }
 
 const data = {
   nome: oferta.curto || oferta.nome, loja: oferta.loja || 'Mercado Livre',
   preco: oferta.preco, preco_antigo: oferta.preco_antigo, desconto: oferta.desconto, vendidos: oferta.vendidos,
-  pose: 'poses/' + pose, produto: 'file://' + path.resolve(prodImg),
+  pose: 'poses/' + pose, recorte: pose.endsWith('.png'), produto: 'file://' + path.resolve(prodImg),
   foco: (() => { try { return JSON.parse(fs.readFileSync(path.join(DIR, 'poses', 'poses.json'), 'utf8'))[pose]?.foco ?? 0.5; } catch { return 0.5; } })(),
 };
 console.log('Oferta:', data.nome, '|', data.loja, '|', data.preco, '| pose', pose);
