@@ -15,9 +15,8 @@ body{font-family:"RB",sans-serif;color:var(--ink);-webkit-font-smoothing:antiali
 #bg:after{content:"";position:absolute;inset:0;background-image:radial-gradient(rgba(181,72,93,.07) 3px,transparent 3.5px);background-size:46px 46px}
 #pcard{left:40px;top:250px;width:545px;height:1330px;border-radius:52px;overflow:hidden;box-shadow:0 30px 70px rgba(59,31,36,.25);background:#ddd}
 #pose{position:absolute;left:0;top:0;height:100%;width:auto}
-#pcard.cut{background:radial-gradient(120% 70% at 50% 85%,#F7D9E0 0%,#EBB7C3 55%,#D98A9C 100%)}
-#pcard.cut:after{content:"";position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.22) 3px,transparent 3.5px);background-size:40px 40px;pointer-events:none}
-#pcard.cut #pose{z-index:1;filter:drop-shadow(0 18px 24px rgba(59,31,36,.28))}
+#pcard.cut{background:none;box-shadow:none;border-radius:0;overflow:visible}
+#pcard.cut #pose{filter:drop-shadow(0 22px 28px rgba(59,31,36,.22))}
 #bubble{left:600px;top:240px;width:440px;min-height:250px;background:#fff;border-radius:56px;box-shadow:0 22px 50px rgba(59,31,36,.18);transform-origin:0% 100%}
 #bubble:after{content:"";position:absolute;left:-26px;bottom:42px;width:70px;height:60px;background:#fff;clip-path:polygon(100% 0,0 100%,100% 70%)}
 .bt{position:absolute;left:38px;right:38px;top:50%;transform:translateY(-50%);font-weight:900;letter-spacing:-.03em;line-height:1.04}
