@@ -38,5 +38,15 @@
     "pose": "pose2.jpg",
     "publicado": true,
     "permalink": null
+  },
+  {
+    "dia": "2026-11-05",
+    "id": "2026-11-05-1",
+    "nome": "Capa Protetora de Colchão",
+    "loja": "Mercado Livre",
+    "preco": 29.99,
+    "pose": "pose1.png",
+    "publicado": true,
+    "permalink": "https://www.instagram.com/reel/DfW0AgMNeOF/"
   }
 ]
