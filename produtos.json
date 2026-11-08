@@ -1,7 +1,7 @@
 {
- "atualizado_em": "2026-11-07T09:21-03:00",
+ "atualizado_em": "2026-11-08T07:21-03:00",
  "ultimo_dia": "2026-11-11",
- "total": 49,
+ "total": 53,
  "produtos": [
   {
    "id": "2026-11-11-18",
@@ -242,6 +242,66 @@
    "link": "https://meli.la/1RGAmkC",
    "loja": "Mercado Livre",
    "imagem": "https://http2.mlstatic.com/D_NQ_NP_2X_718218-MLB116320374143_082026-F.jpg"
+  },
+  {
+   "id": "2026-11-07-14",
+   "data": "2026-11-07",
+   "lista": "volume",
+   "nome": "Tênis Mizuno Academia Creation Caminhada Corrida Conforto",
+   "curto": "Tênis Mizuno Creation",
+   "categoria": "Roupa",
+   "preco": 68.23,
+   "preco_antigo": 339.9,
+   "desconto": 79,
+   "vendidos": 1000,
+   "link": "https://meli.la/1Djj6Yd",
+   "loja": "Mercado Livre",
+   "imagem": "https://http2.mlstatic.com/D_NQ_NP_2X_902125-MLB118150531134_102026-F.jpg"
+  },
+  {
+   "id": "2026-11-07-15",
+   "data": "2026-11-07",
+   "lista": "volume",
+   "nome": "Capa Protetor De Colchão Elástico Queen Impermeável Matelado",
+   "curto": "Capa Colchão Queen",
+   "categoria": "Casa",
+   "preco": 28.4,
+   "preco_antigo": 78.9,
+   "desconto": 64,
+   "vendidos": 100000,
+   "link": "https://meli.la/2Bnjrco",
+   "loja": "Mercado Livre",
+   "imagem": "https://http2.mlstatic.com/D_NQ_NP_2X_902822-MLB113686572268_072026-F.jpg"
+  },
+  {
+   "id": "2026-11-07-16",
+   "data": "2026-11-07",
+   "lista": "volume",
+   "nome": "Amend Essencial Máscara Duo Hidratação e Reparação Efeito Duplo 180g",
+   "curto": "Máscara Amend Duo",
+   "categoria": "Beleza",
+   "preco": 52.9,
+   "preco_antigo": 149.9,
+   "desconto": 65,
+   "vendidos": 0,
+   "link": "https://s.shopee.com.br/5LDIFduhTI",
+   "loja": "Shopee",
+   "imagem": null
+  },
+  {
+   "id": "2026-11-07-17",
+   "data": "2026-11-07",
+   "lista": "volume",
+   "nome": "TOMI MITO Bolsa Feminina Media|Bolsas Femininas De Ombro",
+   "curto": "Bolsa Tomi Mito",
+   "categoria": "Bolsas Femininas",
+   "preco": 63.34,
+   "preco_antigo": 129.99,
+   "desconto": 51,
+   "vendidos": 0,
+   "link": "https://s.shopee.com.br/5VWiRwu48L",
+   "loja": "Shopee",
+   "imagem": null
   },
   {
    "id": "2026-11-06-1",
