@@ -1,7 +1,7 @@
 {
- "atualizado_em": "2026-11-14T07:21-03:00",
+ "atualizado_em": "2026-11-14T09:22-03:00",
  "ultimo_dia": "2026-11-14",
- "total": 84,
+ "total": 86,
  "produtos": [
   {
    "id": "2026-11-14-1",
@@ -107,6 +107,36 @@
    "link": "https://s.shopee.com.br/9V322KkOfY",
    "loja": "Shopee",
    "imagem": "https://down-br.img.susercontent.com/file/br-11134207-820lg-mu2deg1ohybl3b"
+  },
+  {
+   "id": "2026-11-14-8",
+   "data": "2026-11-14",
+   "lista": "volume",
+   "nome": "Cronograma Capilar 5 em 1 Teia Passo Único Fina Maria",
+   "curto": "Distribuidora Oficial Fina Maria",
+   "categoria": "Beleza",
+   "preco": 39.9,
+   "preco_antigo": 79.8,
+   "desconto": 50,
+   "vendidos": 11232,
+   "link": "https://s.shopee.com.br/2BGRRd3kmD",
+   "loja": "Shopee",
+   "imagem": "https://down-br.img.susercontent.com/file/sg-11134201-825ak-mr1yspqi0ow563"
+  },
+  {
+   "id": "2026-11-14-9",
+   "data": "2026-11-14",
+   "lista": "volume",
+   "nome": "Camiseta Masculina 100% Algodão Gola Reforçada Premium",
+   "curto": "TecWear Oficial",
+   "categoria": "Moda Masculina",
+   "preco": 19.95,
+   "preco_antigo": 49.87,
+   "desconto": 60,
+   "vendidos": 4077,
+   "link": "https://s.shopee.com.br/50acoq1lbT",
+   "loja": "Shopee",
+   "imagem": "https://down-br.img.susercontent.com/file/sg-11134201-82596-mt5fmnpo1c7ee3"
   },
   {
    "id": "2026-11-13-1",
