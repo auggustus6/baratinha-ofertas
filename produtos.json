@@ -1,7 +1,7 @@
 {
- "atualizado_em": "2026-11-16T07:22-03:00",
+ "atualizado_em": "2026-11-16T09:23-03:00",
  "ultimo_dia": "2026-11-16",
- "total": 96,
+ "total": 98,
  "produtos": [
   {
    "id": "2026-11-16-1",
@@ -107,6 +107,36 @@
    "link": "https://s.shopee.com.br/2BGUUaNGzG",
    "loja": "Shopee",
    "imagem": "https://down-br.img.susercontent.com/file/br-11134207-820lg-mtw3amr9o4xu08"
+  },
+  {
+   "id": "2026-11-16-8",
+   "data": "2026-11-16",
+   "lista": "volume",
+   "nome": "Mega Hidratação Ouro Marroquino Efeito Teia Fina Maria",
+   "curto": "Distribuidora Oficial Fina Maria",
+   "categoria": "Beleza",
+   "preco": 39.9,
+   "preco_antigo": 79.8,
+   "desconto": 50,
+   "vendidos": 20884,
+   "link": "https://s.shopee.com.br/AUvcYjPlyQ",
+   "loja": "Shopee",
+   "imagem": "https://down-br.img.susercontent.com/file/br-11134207-820lh-mu25vgj4q2o3bf"
+  },
+  {
+   "id": "2026-11-16-9",
+   "data": "2026-11-16",
+   "lista": "volume",
+   "nome": "Kit 2 Shorts Alfaiataria Feminina Social Cintura Alta",
+   "curto": "Ph Modas",
+   "categoria": "Moda Feminina",
+   "preco": 31.8,
+   "preco_antigo": 159.0,
+   "desconto": 80,
+   "vendidos": 5624,
+   "link": "https://s.shopee.com.br/1W0nqC6lY5",
+   "loja": "Shopee",
+   "imagem": "https://down-br.img.susercontent.com/file/br-11134207-7r98o-m39dvlyqglyw60"
   },
   {
    "id": "2026-11-15-1",
