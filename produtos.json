@@ -1,7 +1,7 @@
 {
- "atualizado_em": "2026-11-17T07:22-03:00",
+ "atualizado_em": "2026-11-17T09:22-03:00",
  "ultimo_dia": "2026-11-17",
- "total": 102,
+ "total": 103,
  "produtos": [
   {
    "id": "2026-11-17-1",
@@ -107,6 +107,36 @@
    "link": "https://s.shopee.com.br/4LL0fFP7BR",
    "loja": "Shopee",
    "imagem": "https://down-br.img.susercontent.com/file/br-11134207-820l6-muuprasup1xc3a"
+  },
+  {
+   "id": "2026-11-17-8",
+   "data": "2026-11-17",
+   "lista": "volume",
+   "nome": "Sutiã Adesivo Push-Up com Fechamento Frontal Reutilizável",
+   "curto": "G&F LINDA",
+   "categoria": "Moda Feminina",
+   "preco": 16.98,
+   "preco_antigo": 77.18,
+   "desconto": 78,
+   "vendidos": 11251,
+   "link": "https://s.shopee.com.br/9zzNYWW4v3",
+   "loja": "Shopee",
+   "imagem": "https://down-br.img.susercontent.com/file/sg-11134201-825zv-mjfq1wfnkm4ia7"
+  },
+  {
+   "id": "2026-11-17-9",
+   "data": "2026-11-17",
+   "lista": "volume",
+   "nome": "Máquina de Barbear e Aparador de Pelos Elétrico 3 em 1",
+   "curto": "Isabela Top",
+   "categoria": "Beleza",
+   "preco": 48.39,
+   "preco_antigo": 130.78,
+   "desconto": 63,
+   "vendidos": 10102,
+   "link": "https://s.shopee.com.br/9AQByso3M5",
+   "loja": "Shopee",
+   "imagem": "https://down-br.img.susercontent.com/file/04527aa2d9d6a2e8d2b68d715f079947"
   },
   {
    "id": "2026-11-16-1",
@@ -752,21 +782,6 @@
    "link": "https://s.shopee.com.br/50acoq1lbT",
    "loja": "Shopee",
    "imagem": "https://down-br.img.susercontent.com/file/sg-11134201-82596-mt5fmnpo1c7ee3"
-  },
-  {
-   "id": "2026-11-14-10",
-   "data": "2026-11-14",
-   "lista": "volume",
-   "nome": "Máquina de Barbear e Aparador de Pelos Elétrico 3 em 1",
-   "curto": "Isabela Top",
-   "categoria": "Beleza",
-   "preco": 48.39,
-   "preco_antigo": 130.78,
-   "desconto": 63,
-   "vendidos": 10247,
-   "link": "https://s.shopee.com.br/9AQByso3M5",
-   "loja": "Shopee",
-   "imagem": "https://down-br.img.susercontent.com/file/04527aa2d9d6a2e8d2b68d715f079947"
   },
   {
    "id": "2026-11-14-11",
