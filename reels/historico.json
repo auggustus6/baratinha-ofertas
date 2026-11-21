@@ -158,5 +158,15 @@
     "pose": "pose1.png",
     "publicado": true,
     "permalink": "https://www.instagram.com/reel/Df9qgjxhBwr/"
+  },
+  {
+    "dia": "2026-11-21",
+    "id": "2026-11-21-1",
+    "nome": "JIMMY.STORE",
+    "loja": "Shopee",
+    "preco": 37.99,
+    "pose": "pose2.png",
+    "publicado": true,
+    "permalink": "https://www.instagram.com/reel/DgAON7sS2uu/"
   }
 ]
