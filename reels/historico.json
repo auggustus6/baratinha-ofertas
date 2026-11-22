@@ -168,5 +168,15 @@
     "pose": "pose2.png",
     "publicado": true,
     "permalink": "https://www.instagram.com/reel/DgAON7sS2uu/"
+  },
+  {
+    "dia": "2026-11-22",
+    "id": "2026-11-22-2",
+    "nome": "Shopee",
+    "loja": "Shopee",
+    "preco": 29.98,
+    "pose": "pose1.png",
+    "publicado": true,
+    "permalink": "https://www.instagram.com/reel/DgCzBrAOSnb/"
   }
 ]
