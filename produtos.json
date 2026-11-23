@@ -1,7 +1,7 @@
 {
- "atualizado_em": "2026-11-23T07:22-03:00",
+ "atualizado_em": "2026-11-23T09:21-03:00",
  "ultimo_dia": "2026-11-23",
- "total": 99,
+ "total": 101,
  "produtos": [
   {
    "id": "2026-11-23-1",
@@ -107,6 +107,36 @@
    "link": "https://s.shopee.com.br/3g5TRUV3GH",
    "loja": "Shopee",
    "imagem": "https://down-br.img.susercontent.com/file/sg-11134201-821ga-mgmnanndqy33a8"
+  },
+  {
+   "id": "2026-11-23-8",
+   "data": "2026-11-23",
+   "lista": "volume",
+   "nome": "Caneta de Sobrancelha Fio a Fio 4 Pontas À Prova D'Água",
+   "curto": "Shopee",
+   "categoria": "Beleza",
+   "preco": 17.99,
+   "preco_antigo": 89.95,
+   "desconto": 80,
+   "vendidos": 9268,
+   "link": "https://s.shopee.com.br/9AQQ8VT3Aa",
+   "loja": "Shopee",
+   "imagem": "https://down-br.img.susercontent.com/file/br-11134211-820l8-ms8njpxdznrb76"
+  },
+  {
+   "id": "2026-11-23-9",
+   "data": "2026-11-23",
+   "lista": "volume",
+   "nome": "Capa para Banco de Carro Tecido Grosso com Espuma Estampada",
+   "curto": "Shopee",
+   "categoria": "Automotivo",
+   "preco": 59.9,
+   "preco_antigo": 130.22,
+   "desconto": 54,
+   "vendidos": 1357,
+   "link": "https://s.shopee.com.br/7pv10K2UwV",
+   "loja": "Shopee",
+   "imagem": "https://down-br.img.susercontent.com/file/br-11134207-81z1k-mdx94eyplypv25"
   },
   {
    "id": "2026-11-22-1",
