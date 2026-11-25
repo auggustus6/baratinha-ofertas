@@ -1,7 +1,7 @@
 {
- "atualizado_em": "2026-11-25T07:22-03:00",
+ "atualizado_em": "2026-11-25T09:22-03:00",
  "ultimo_dia": "2026-11-25",
- "total": 99,
+ "total": 101,
  "produtos": [
   {
    "id": "2026-11-25-1",
@@ -107,6 +107,36 @@
    "link": "https://s.shopee.com.br/2BGire01Ta",
    "loja": "Shopee",
    "imagem": "https://down-br.img.susercontent.com/file/br-11134207-820m4-mtjmffjesl4w4e"
+  },
+  {
+   "id": "2026-11-25-8",
+   "data": "2026-11-25",
+   "lista": "volume",
+   "nome": "Macacão Feminino Pantalona Alça Fina com Bolso e Decote V",
+   "curto": "Shopee",
+   "categoria": "Moda Feminina",
+   "preco": 59.1,
+   "preco_antigo": 179.09,
+   "desconto": 67,
+   "vendidos": 1309,
+   "link": "https://s.shopee.com.br/4VedljOopH",
+   "loja": "Shopee",
+   "imagem": "https://down-br.img.susercontent.com/file/br-11134207-820lt-mr1lsc1liuit65"
+  },
+  {
+   "id": "2026-11-25-9",
+   "data": "2026-11-25",
+   "lista": "volume",
+   "nome": "Kit 8 Brinquedos Bebê Chocalho Mordedor Silicone Bola Colorida",
+   "curto": "Shopee",
+   "categoria": "Mãe e Bebê",
+   "preco": 26.88,
+   "preco_antigo": 59.73,
+   "desconto": 55,
+   "vendidos": 1173,
+   "link": "https://s.shopee.com.br/Lp4o4ijlT",
+   "loja": "Shopee",
+   "imagem": "https://down-br.img.susercontent.com/file/sg-11134201-81zvh-mmrk9zikagw461"
   },
   {
    "id": "2026-11-24-1",
